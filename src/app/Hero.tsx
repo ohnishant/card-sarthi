@@ -13,8 +13,8 @@ const Hero = () => {
             <strong className="text-6xl leading-normal">
               Pick The Right Credit Card
             </strong>
-            Access a variety of India's best credit cards in one central hub and
-            find the right one for you.
+            Access a variety of India&apos;s best credit cards in one central
+            hub and find the right one for you.
           </p>
           <Link href="/" className="flex items-center gap-2">
             Know your credit score
