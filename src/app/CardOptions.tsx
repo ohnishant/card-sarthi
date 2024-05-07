@@ -1,4 +1,5 @@
 "use client";
+import CardOption from "@/components/CardOption";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
@@ -6,8 +7,8 @@ import { CreditCard } from "lucide-react";
 
 export default function CardOptions() {
   return (
-    <Tabs defaultValue="creditCard" className="w-full px-8">
-      <TabsList className="flex flex-row h-[232px] justify-around bg-[#FDF9F0]">
+    <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
+      <TabsList className="flex flex-row h-[232px] justify-around bg-[#FDF9F0] flex-wrap">
         <TabsTrigger value="creditCard">
           <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
             <CreditCard />
@@ -43,7 +44,7 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">Credit Cards</strong>
+              <strong className="text-4xl font-semibold">Credit Cards</strong>
               <div className="w-[466px]">
                 Optimize Your Earnings with Our Best Rewards Credit Cards: Find
                 credit cards that maximize your rewards on every purchase.
@@ -64,7 +65,7 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">Reward Cards</strong>
+              <strong className="text-4xl font-semibold">Reward Cards</strong>
               <div className="w-[466px]">
                 Enjoy retail therapy with shopping credit cards: Let your inner
                 shopaholic shine!
@@ -85,7 +86,9 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">No annual fee Cards</strong>
+              <strong className="text-4xl font-semibold">
+                No annual fee Cards
+              </strong>
               <div className="w-[466px]">
                 Enjoy the advantages at No Cost: Find lifetime free credit cards
               </div>
@@ -105,7 +108,7 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">Cashback Cards</strong>
+              <strong className="text-4xl font-semibold">Cashback Cards</strong>
               <div className="w-[466px]">
                 Check out the finest cashback credit cards matching your needs
               </div>
@@ -125,7 +128,7 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">Shopping Cards</strong>
+              <strong className="text-4xl font-semibold">Shopping Cards</strong>
               <div className="w-[466px]">
                 Enjoy retail therapy with shopping credit cards: Let your inner
                 shopaholic shine!
@@ -146,7 +149,7 @@ export default function CardOptions() {
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
-              <strong className="text-4xl">Travel Cards</strong>
+              <strong className="text-4xl font-semibold">Travel Cards</strong>
               <div className="w-[466px]">
                 Embark on adventures with travel credit cards: Discover the
                 perks of exploring the world
@@ -164,31 +167,5 @@ export default function CardOptions() {
         </div>
       </TabsContent>
     </Tabs>
-  );
-}
-
-function CardOption({
-  children,
-  text,
-  bgColor,
-  size,
-}: {
-  children: React.ReactNode;
-  text: string;
-  bgColor?: string;
-  size?: number;
-}) {
-  return (
-    <div className={cn("flex flex-col items-center size-28", size)}>
-      <div
-        className={cn(
-          "rounded-full flex items-center justify-center size-[80px]",
-          bgColor,
-        )}
-      >
-        {children}
-      </div>
-      <div>{text}</div>
-    </div>
   );
 }
