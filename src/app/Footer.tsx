@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div>
+      <div className="flex gap-20">
         <div className="flex flex-col gap-4 w-[334px]">
           <div>
             <span className="text-white font-semibold">Address:</span>
@@ -57,6 +57,53 @@ const Footer = () => {
             <span className="text-white font-semibold">E-mail : </span>
             <span className="text-sm">info@cardsarthi.in</span>
           </div>
+        </div>
+
+        <span className="flex w-full flex-row justify-between">
+          <div>
+            <span className="text-white font-semibold">Products:</span>
+            <ul className="text-sm space-y-2 list-disc">
+              <li>Credit Cards</li>
+              <li>Cashback Cards</li>
+              <li>Reward Cards</li>
+              <li>No annual fees Cards</li>
+              <li>Travel Cards</li>
+              <li>Shopping Cards</li>
+            </ul>
+          </div>
+          <div>
+            <span className="text-white font-semibold">Company:</span>
+            <ul className="text-sm space-y-2 list-disc">
+              <li>About Card Sarthi</li>
+              <li>Contact Us</li>
+              <li>Privacy & Policy</li>
+              <li>Terms of Use</li>
+              <li>Partners</li>
+            </ul>
+          </div>
+          <div>
+            <span className="text-white font-semibold">Resources:</span>
+            <ul className="text-sm space-y-2 list-disc">
+              <li>Check Eligibility</li>
+              <li>Blogs</li>
+              <li>Videos</li>
+              <li>Credit Card News</li>
+            </ul>
+          </div>
+          <div>
+            <span className="text-white font-semibold">Tools:</span>
+            <ul className="text-sm space-y-2 list-disc">
+              <li>EMI Calculator</li>
+              <li>Credit Scores</li>
+            </ul>
+          </div>
+        </span>
+      </div>
+      <hr />
+      <div className="flex flex-row gap-36 text-white justify-between">
+        <div>Copyright © 2024 Card Sarthi Inc. All rights reserved</div>
+        <div>
+          Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map
         </div>
       </div>
     </div>
