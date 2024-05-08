@@ -22,7 +22,7 @@ const NavMenuMobile = () => {
           <Bell size={40} />
         </Button>
         <Drawer direction="right">
-          <DrawerTrigger>
+          <DrawerTrigger asChild>
             <Button variant="ghost" className="py-4">
               <Menu size={40} />
             </Button>
