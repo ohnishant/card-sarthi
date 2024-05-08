@@ -1,7 +1,12 @@
 "use client";
 import CardOption from "@/components/CardOption";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +17,14 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { CreditCard } from "lucide-react";
+import {
+  Banknote,
+  CreditCard,
+  Gift,
+  Luggage,
+  ReceiptText,
+  ShoppingCart,
+} from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
@@ -31,45 +43,70 @@ const MobileCardOptions = () => {
         plugins={[plugin.current]}
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/2 md:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">1</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-          <CarouselItem className="basis-1/2 md:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">2</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-          <CarouselItem className="basis-1/2 md:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">3</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-          <CarouselItem className="basis-1/2 md:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">4</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
+          {options.map((option) => (
+            <MobileCard
+              key={option.id}
+              icon={option.icon}
+              title={option.title}
+              description={option.description}
+              button={option.button}
+              buttonOutline={option.buttonOutline}
+              link={option.link}
+              linkOutline={option.linkOutline}
+            />
+          ))}
         </CarouselContent>
       </Carousel>
     </div>
+  );
+};
+
+interface MobileCardProps {
+  title: string;
+  description: string;
+  button: string;
+  icon?: JSX.Element;
+  buttonOutline: string;
+  link: string;
+  linkOutline: string;
+}
+const MobileCard: React.FC<MobileCardProps> = ({
+  title,
+  description,
+  icon,
+  button,
+  buttonOutline,
+  link,
+  linkOutline,
+}) => {
+  return (
+    <CarouselItem className="basis-3/4 md:basis-1/3 h-full">
+      <div className="p-1 h-full">
+        <Card className="bg-[#FDF8EE] h-full outline-none">
+          <CardHeader>
+            <div className="flex flex-row gap-2 font-semibold text-l">
+              {icon}
+              {title}
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-[#505050]">{description}</div>
+          </CardContent>
+          <CardFooter className="flex flex-col items-center gap-2">
+            <div className="w-full">
+              <Button className="w-full bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none">
+                {button}
+              </Button>
+            </div>
+            <div className="w-full">
+              <Button variant="outline" className="w-full rounded-none">
+                {buttonOutline}
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+      </div>
+    </CarouselItem>
   );
 };
 
@@ -79,7 +116,7 @@ const DesktopCardOptions = () => {
       <TabsList className="flex flex-row h-auto py-10 justify-around bg-[#FDF9F0] flex-wrap">
         <TabsTrigger value="creditCard">
           <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
+            <Gift />
           </CardOption>
         </TabsTrigger>
         <TabsTrigger value="rewardCards">
@@ -237,3 +274,72 @@ const DesktopCardOptions = () => {
     </Tabs>
   );
 };
+
+const options = [
+  {
+    id: 1,
+    icon: <Gift />,
+    title: "Credit Cards",
+    description:
+      "Optimize Your Earnings with Our Best Rewards Credit Cards: Find credit cards that maximize your rewards on every purchase.",
+    button: "Apply for Credit Card",
+    buttonOutline: "Uncover more",
+    link: "/",
+    linkOutline: "/",
+  },
+  {
+    id: 2,
+    icon: <CreditCard />,
+    title: "Reward Cards",
+    description:
+      "Enjoy retail therapy with shopping credit cards: Let your inner shopaholic shine!",
+    button: "Apply for Reward Card",
+    buttonOutline: "No annual Fee Card suggestion",
+    link: "/",
+    linkOutline: "/",
+  },
+  {
+    id: 3,
+    icon: <ReceiptText />,
+    title: "No annual fee Cards",
+    description:
+      "Enjoy the advantages at No Cost: Find lifetime free credit cards",
+    button: "Apply for Credit Card",
+    buttonOutline: "Uncover more",
+    link: "/",
+    linkOutline: "/",
+  },
+  {
+    id: 4,
+    title: "Cashback Cards",
+    icon: <Banknote />,
+    description:
+      "Check out the finest cashback credit cards matching your needs",
+    button: "Apply for Cashback Card",
+    buttonOutline: "No annual Fee Card suggestion",
+    link: "/",
+    linkOutline: "/",
+  },
+  {
+    id: 5,
+    title: "Shopping Cards",
+    icon: <ShoppingCart />,
+    description:
+      "Enjoy retail therapy with shopping credit cards: Let your inner shopaholic shine!",
+    button: "Apply for Shopping Card",
+    buttonOutline: "Shopping Credit Card suggestion",
+    link: "/",
+    linkOutline: "/",
+  },
+  {
+    id: 6,
+    title: "Travel Cards",
+    icon: <Luggage />,
+    description:
+      "Embark on adventures with travel credit cards: Discover the perks of exploring the world",
+    button: "Apply for Credit Card",
+    buttonOutline: "Travel Credit Card Suggestion",
+    link: "/",
+    linkOutline: "/",
+  },
+];
