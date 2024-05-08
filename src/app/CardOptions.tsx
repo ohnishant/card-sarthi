@@ -8,7 +8,7 @@ import { CreditCard } from "lucide-react";
 export default function CardOptions() {
   return (
     <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
-      <TabsList className="flex flex-row h-[232px] justify-around bg-[#FDF9F0] flex-wrap">
+      <TabsList className="flex flex-row h-auto py-10 justify-around bg-[#FDF9F0] flex-wrap">
         <TabsTrigger value="creditCard">
           <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
             <CreditCard />
@@ -40,8 +40,8 @@ export default function CardOptions() {
           </CardOption>
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="creditCard">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+      <TabsContent value="creditCard" className="h-auto">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">Credit Cards</strong>
@@ -62,7 +62,7 @@ export default function CardOptions() {
         </div>
       </TabsContent>
       <TabsContent value="rewardCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">Reward Cards</strong>
@@ -83,7 +83,7 @@ export default function CardOptions() {
         </div>
       </TabsContent>
       <TabsContent value="noAnnualFee">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">
@@ -105,7 +105,7 @@ export default function CardOptions() {
         </div>
       </TabsContent>
       <TabsContent value="cashbackCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">Cashback Cards</strong>
@@ -125,7 +125,7 @@ export default function CardOptions() {
         </div>
       </TabsContent>
       <TabsContent value="shoppingCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">Shopping Cards</strong>
@@ -146,7 +146,7 @@ export default function CardOptions() {
         </div>
       </TabsContent>
       <TabsContent value="travelCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-40">
+        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
           <div className="flex flex-row">
             <div className="flex flex-col gap-4">
               <strong className="text-4xl font-semibold">Travel Cards</strong>
