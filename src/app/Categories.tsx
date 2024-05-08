@@ -11,8 +11,10 @@ import {
 const Categories = () => {
   return (
     <div className="flex flex-col bg-[#FEEFFF80] my-16 justify-center py-12 gap-8 items-center">
-      <strong className="text-4xl font-semibold">Our Best Categories</strong>
-      <div className="flex flex-row justify-around flex-wrap gap-16 w-full">
+      <strong className="text-4xl font-semibold text-center">
+        Our Best Categories
+      </strong>
+      <div className="md:flex md:flex-row grid grid-cols-3 md:justify-around flex-wrap md:gap-16 w-full justify-items-center">
         {categories.map((category) => (
           <CardOption
             key={category.id}

@@ -15,7 +15,7 @@ export default function CardOption({
     <div className={cn("flex flex-col items-center size-28", size)}>
       <div
         className={cn(
-          "rounded-full flex items-center justify-center size-[80px]",
+          "md:rounded-full rounded-lg flex items-center justify-center size-[80px]",
           bgColor,
         )}
       >
