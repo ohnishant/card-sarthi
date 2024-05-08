@@ -1,11 +1,79 @@
 "use client";
 import CardOption from "@/components/CardOption";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { CreditCard } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 export default function CardOptions() {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  return isDesktop ? <DesktopCardOptions /> : <MobileCardOptions />;
+}
+
+const MobileCardOptions = () => {
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  return (
+    <div className="w-full px-6 flex pt-8 items-center justify-center">
+      <Carousel
+        className="w-full"
+        opts={{ align: "start", loop: true }}
+        plugins={[plugin.current]}
+      >
+        <CarouselContent>
+          <CarouselItem className="basis-1/2 md:basis-1/3">
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">1</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem className="basis-1/2 md:basis-1/3">
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">2</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem className="basis-1/2 md:basis-1/3">
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">3</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem className="basis-1/2 md:basis-1/3">
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">4</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
+    </div>
+  );
+};
+
+const DesktopCardOptions = () => {
   return (
     <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
       <TabsList className="flex flex-row h-auto py-10 justify-around bg-[#FDF9F0] flex-wrap">
@@ -168,4 +236,4 @@ export default function CardOptions() {
       </TabsContent>
     </Tabs>
   );
-}
+};
