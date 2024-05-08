@@ -3,19 +3,19 @@ import { Star } from "lucide-react";
 
 const Reviews = () => {
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full px-6 justify-center">
       <div className="w-[1112px]">
-        <strong className="text-4xl font-semibold">
+        <strong className="md:text-4xl text-xl font-semibold">
           See what our clients shared
         </strong>
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 md:gap-16 gap-8 pt-6 flex-wrap">
           <Review
             name="Vaishnavi"
-            message="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat"
+            message="We greatly value your positive feedback about our bank. It's rewarding to hear that our services have met your expectations. Your satisfaction motivates us to continually improve and serve you better. Thank you for entrusting us with your financial needs."
           />
           <Review
             name="Suresh"
-            message="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat"
+            message="Your positive feedback fuels our commitment to excellence in banking. Thank you for sharing your satisfaction with us. We're dedicated to continuously enhancing your banking experience. Your trust in us means everything."
           />
         </div>
       </div>
@@ -45,7 +45,7 @@ const Review = ({ name, message }: { name: string; message: string }) => {
           </div>
         </div>
       </div>
-      <div className="text-[#505050] text-sm">{message}</div>
+      <div className="text-[#505050] pt-2 text-sm">{message}</div>
     </div>
   );
 };
