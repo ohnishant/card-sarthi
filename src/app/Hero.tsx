@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="flex items-center justify-center flex-row">
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row justify-center items-center">
-        <div className="flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
+        <div className="hidden md:flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
           <p
             className={`text-xl flex flex-col gap-6 text-gray-800 antialiased md:text-xl md:leading-normal`}
           >
@@ -31,9 +31,9 @@ const Hero = () => {
             alt="Screenshot of the dashboard project in the desktop mode"
           />
           <Image
-            src="/hero-mobile.png"
-            width={560}
-            height={620}
+            src="/hero_mobile.png"
+            width={768}
+            height={355}
             className="block md:hidden"
             alt="Screenshot of the dashboard project in the mobile mode"
           />
