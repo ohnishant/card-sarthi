@@ -1,10 +1,10 @@
-import CardOptions from "./CardOptions";
-import Categories from "./Categories";
-import Connect from "./Connect";
-import Hero from "./Hero";
-import Reviews from "./Reviews";
-import Steps from "./Steps";
-import Footer from "./Footer";
+import CardOptions from "./_components/CardOptions";
+import Categories from "./_components/Categories";
+import Connect from "./_components/Connect";
+import Hero from "./_components/Hero";
+import Reviews from "./_components/Reviews";
+import Steps from "./_components/Steps";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
