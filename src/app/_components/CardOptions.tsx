@@ -113,37 +113,39 @@ const MobileCard: React.FC<MobileCardProps> = ({
 const DesktopCardOptions = () => {
   return (
     <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
-      <TabsList className="flex flex-row h-auto py-10 justify-around bg-[#FDF9F0] flex-wrap">
-        <TabsTrigger value="creditCard">
-          <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
-            <Gift />
-          </CardOption>
-        </TabsTrigger>
-        <TabsTrigger value="rewardCards">
-          <CardOption text="Reward Cards" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
-          </CardOption>
-        </TabsTrigger>
-        <TabsTrigger value="noAnnualFee">
-          <CardOption text="No Annual Fees" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
-          </CardOption>
-        </TabsTrigger>
-        <TabsTrigger value="cashbackCards">
-          <CardOption text="Cashback Cards" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
-          </CardOption>
-        </TabsTrigger>
-        <TabsTrigger value="shoppingCards">
-          <CardOption text="Shopping Cards" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
-          </CardOption>
-        </TabsTrigger>
-        <TabsTrigger value="travelCards">
-          <CardOption text="Travel Cards" bgColor="bg-[#FFE1A0]">
-            <CreditCard />
-          </CardOption>
-        </TabsTrigger>
+      <TabsList className="h-auto py-10 bg-[#FDF9F0] w-full">
+        <div className="container flex flex-row justify-around flex-wrap">
+          <TabsTrigger value="creditCard">
+            <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
+              <Gift />
+            </CardOption>
+          </TabsTrigger>
+          <TabsTrigger value="rewardCards">
+            <CardOption text="Reward Cards" bgColor="bg-[#FFE1A0]">
+              <CreditCard />
+            </CardOption>
+          </TabsTrigger>
+          <TabsTrigger value="noAnnualFee">
+            <CardOption text="No Annual Fees" bgColor="bg-[#FFE1A0]">
+              <CreditCard />
+            </CardOption>
+          </TabsTrigger>
+          <TabsTrigger value="cashbackCards">
+            <CardOption text="Cashback Cards" bgColor="bg-[#FFE1A0]">
+              <CreditCard />
+            </CardOption>
+          </TabsTrigger>
+          <TabsTrigger value="shoppingCards">
+            <CardOption text="Shopping Cards" bgColor="bg-[#FFE1A0]">
+              <CreditCard />
+            </CardOption>
+          </TabsTrigger>
+          <TabsTrigger value="travelCards">
+            <CardOption text="Travel Cards" bgColor="bg-[#FFE1A0]">
+              <CreditCard />
+            </CardOption>
+          </TabsTrigger>
+        </div>
       </TabsList>
       <TabsContent value="creditCard" className="h-auto">
         <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
