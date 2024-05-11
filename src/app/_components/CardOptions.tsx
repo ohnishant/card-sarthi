@@ -11,8 +11,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -27,6 +25,7 @@ import {
 } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function CardOptions() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -115,164 +114,40 @@ const DesktopCardOptions = () => {
     <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
       <TabsList className="h-auto py-10 bg-[#FDF9F0] w-full">
         <div className="container flex flex-row justify-around flex-wrap">
-          <TabsTrigger value="creditCard">
-            <CardOption text="Credit Cards" bgColor="bg-[#FFE1A0]">
-              <Gift />
-            </CardOption>
-          </TabsTrigger>
-          <TabsTrigger value="rewardCards">
-            <CardOption text="Reward Cards" bgColor="bg-[#FFE1A0]">
-              <CreditCard />
-            </CardOption>
-          </TabsTrigger>
-          <TabsTrigger value="noAnnualFee">
-            <CardOption text="No Annual Fees" bgColor="bg-[#FFE1A0]">
-              <CreditCard />
-            </CardOption>
-          </TabsTrigger>
-          <TabsTrigger value="cashbackCards">
-            <CardOption text="Cashback Cards" bgColor="bg-[#FFE1A0]">
-              <CreditCard />
-            </CardOption>
-          </TabsTrigger>
-          <TabsTrigger value="shoppingCards">
-            <CardOption text="Shopping Cards" bgColor="bg-[#FFE1A0]">
-              <CreditCard />
-            </CardOption>
-          </TabsTrigger>
-          <TabsTrigger value="travelCards">
-            <CardOption text="Travel Cards" bgColor="bg-[#FFE1A0]">
-              <CreditCard />
-            </CardOption>
-          </TabsTrigger>
+          {options.map((option) => (
+            <TabsTrigger key={option.key} value={option.key}>
+              <CardOption text={option.title} bgColor="bg-[#FFE1A0]">
+                {option.icon}
+              </CardOption>
+            </TabsTrigger>
+          ))}
         </div>
       </TabsList>
-      <TabsContent value="creditCard" className="h-auto">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">Credit Cards</strong>
-              <div className="w-[466px]">
-                Optimize Your Earnings with Our Best Rewards Credit Cards: Find
-                credit cards that maximize your rewards on every purchase.
+      {options.map((option) => (
+        <TabsContent key={option.key} value={option.key} className="h-auto">
+          <div className="flex flex-row justify-between container h-auto">
+            <div className="flex flex-row">
+              <div className="flex flex-col gap-4">
+                <strong className="text-4xl font-semibold">
+                  {option.title}
+                </strong>
+                <div className="max-w-[466px]">{option.description}</div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              Want to uncover more
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="rewardCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">Reward Cards</strong>
-              <div className="w-[466px]">
-                Enjoy retail therapy with shopping credit cards: Let your inner
-                shopaholic shine!
-              </div>
+            <div className="flex flex-col gap-10">
+              <Button
+                className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3"
+                asChild
+              >
+                <Link href={option.link}>{option.button}</Link>
+              </Button>
+              <Button variant="outline" className="rounded-none mb-3" asChild>
+                <Link href={option.linkOutline}>{option.buttonOutline}</Link>
+              </Button>
             </div>
           </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Compare and Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              No annual Fee Card suggestion
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="noAnnualFee">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">
-                No annual fee Cards
-              </strong>
-              <div className="w-[466px]">
-                Enjoy the advantages at No Cost: Find lifetime free credit cards
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              Want to uncover more
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="cashbackCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">Cashback Cards</strong>
-              <div className="w-[466px]">
-                Check out the finest cashback credit cards matching your needs
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Compare and Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              No annual Fee Card suggestion
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="shoppingCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">Shopping Cards</strong>
-              <div className="w-[466px]">
-                Enjoy retail therapy with shopping credit cards: Let your inner
-                shopaholic shine!
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Compare Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              Shopping Credit Card suggestion
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="travelCards">
-        <div className="flex flex-col gap-16 lg:flex-row justify-around h-auto">
-          <div className="flex flex-row">
-            <div className="flex flex-col gap-4">
-              <strong className="text-4xl font-semibold">Travel Cards</strong>
-              <div className="w-[466px]">
-                Embark on adventures with travel credit cards: Discover the
-                perks of exploring the world
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Button className="bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none mt-3">
-              Apply for Credit Card
-            </Button>
-            <Button variant="outline" className="rounded-none mb-3">
-              Travel Credit Card Suggestion
-            </Button>
-          </div>
-        </div>
-      </TabsContent>
+        </TabsContent>
+      ))}
     </Tabs>
   );
 };
@@ -281,6 +156,7 @@ const options = [
   {
     id: 1,
     icon: <Gift />,
+    key: "creditCard",
     title: "Credit Cards",
     description:
       "Optimize Your Earnings with Our Best Rewards Credit Cards: Find credit cards that maximize your rewards on every purchase.",
@@ -292,6 +168,7 @@ const options = [
   {
     id: 2,
     icon: <CreditCard />,
+    key: "rewardCards",
     title: "Reward Cards",
     description:
       "Enjoy retail therapy with shopping credit cards: Let your inner shopaholic shine!",
@@ -303,6 +180,7 @@ const options = [
   {
     id: 3,
     icon: <ReceiptText />,
+    key: "noAnnualFee",
     title: "No annual fee Cards",
     description:
       "Enjoy the advantages at No Cost: Find lifetime free credit cards",
@@ -314,6 +192,7 @@ const options = [
   {
     id: 4,
     title: "Cashback Cards",
+    key: "cashbackCards",
     icon: <Banknote />,
     description:
       "Check out the finest cashback credit cards matching your needs",
@@ -325,6 +204,7 @@ const options = [
   {
     id: 5,
     title: "Shopping Cards",
+    key: "shoppingCards",
     icon: <ShoppingCart />,
     description:
       "Enjoy retail therapy with shopping credit cards: Let your inner shopaholic shine!",
@@ -336,6 +216,7 @@ const options = [
   {
     id: 6,
     title: "Travel Cards",
+    key: "travelCards",
     icon: <Luggage />,
     description:
       "Embark on adventures with travel credit cards: Discover the perks of exploring the world",
