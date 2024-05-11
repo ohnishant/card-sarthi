@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="text-[#BFBFBF] flex flex-col gap-8 p-2 bg-gradient-to-t to-[#372093] from-[#0B0523]">
+    <div className="text-[#BFBFBF] flex flex-col gap-8 px-8 p-2 bg-gradient-to-t to-[#372093] from-[#0B0523]">
       <div className="w-full px-2 flex justify-between">
         <Image
           src="/monochrome_logo.png"

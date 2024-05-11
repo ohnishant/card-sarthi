@@ -35,7 +35,7 @@ const StepsDesktop = () => {
   return (
     <div className="w-full items-center justify-center flex-col my-12">
       <div className="flex w-full items-center justify-center">
-        <div className="w-[1118px] flex justify-between flex-row">
+        <div className="container flex justify-between flex-row">
           <div>
             <div className="flex flex-col w-96 gap-8">
               <strong className="text-4xl font-semibold">

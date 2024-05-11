@@ -3,8 +3,8 @@ import { Star } from "lucide-react";
 
 const Reviews = () => {
   return (
-    <div className="flex w-full px-6 justify-center">
-      <div className="w-[1112px]">
+    <div className="container flex w-full px-6 justify-center">
+      <div className="">
         <strong className="md:text-4xl text-xl font-semibold">
           See what our clients shared
         </strong>
