@@ -36,12 +36,13 @@ const Review = ({ name, message }: { name: string; message: string }) => {
           <div className="text-xs text-[#636363]">
             31<sup>st</sup> March, 2024
           </div>
+          {/* TODO: Generate the number of stars programatically */}
           <div className="grid grid-cols-5 text-[#747474]">
-            <Star fill="yellow" strokeWidth={1} />
-            <Star fill="yellow" strokeWidth={1} />
-            <Star fill="yellow" strokeWidth={1} />
-            <Star fill="yellow" strokeWidth={1} />
-            <Star strokeWidth={1} />
+            <Star fill="#EEB541" strokeWidth={0} size={15} />
+            <Star fill="#EEB541" strokeWidth={0} size={15} />
+            <Star fill="#EEB541" strokeWidth={0} size={15} />
+            <Star fill="#EEB541" strokeWidth={0} size={15} />
+            <Star strokeWidth={1} size={14} />
           </div>
         </div>
       </div>
