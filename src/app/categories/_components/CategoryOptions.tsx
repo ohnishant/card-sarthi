@@ -1,7 +1,15 @@
 "use client";
 import CardOption from "@/components/CardOption";
 import { Button } from "@/components/ui/button";
-import { Gift } from "lucide-react";
+import {
+  Armchair,
+  Banknote,
+  Gift,
+  Luggage,
+  ReceiptText,
+  ShoppingCart,
+  UtensilsCrossed,
+} from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 
@@ -50,48 +58,55 @@ const CategoryOptions = () => {
 
   return (
     <div className="bg-[#FEF7FF]">
-      <div className="container flex flex-row items-center py-10 justify-between">
+      <div className="container flex flex-row items-center py-10 md:justify-between overflow-scroll">
         <TabOption
           text="Reward"
           currentTab={selectedTab}
           activeOn="reward_card"
           onClick={() => handleTabChange("reward_card")}
+          icon={<Gift />}
         />
         <TabOption
           text="No annual fee"
           currentTab={selectedTab}
           activeOn="no_annual_fee"
           onClick={() => handleTabChange("no_annual_fee")}
+          icon={<ReceiptText />}
         />
         <TabOption
           text="Lounge"
           currentTab={selectedTab}
           activeOn="lounge"
           onClick={() => handleTabChange("lounge")}
+          icon={<Armchair />}
         />
         <TabOption
           text="Cashback"
           currentTab={selectedTab}
           activeOn="cashback"
           onClick={() => handleTabChange("cashback")}
+          icon={<Banknote />}
         />
         <TabOption
           text="Shopping"
           currentTab={selectedTab}
           activeOn="shopping"
           onClick={() => handleTabChange("shopping")}
+          icon={<ShoppingCart />}
         />
         <TabOption
           text="Travel"
           currentTab={selectedTab}
           activeOn="travel"
           onClick={() => handleTabChange("travel")}
+          icon={<Luggage />}
         />
         <TabOption
           text="Dine in"
           currentTab={selectedTab}
           activeOn="dine"
           onClick={() => handleTabChange("dine")}
+          icon={<UtensilsCrossed />}
         />
       </div>
     </div>
@@ -103,11 +118,13 @@ const TabOption = ({
   activeOn,
   text,
   onClick,
+  icon,
 }: {
   currentTab: string;
   activeOn: string;
   text: string;
   onClick?: () => void;
+  icon: JSX.Element;
 }) => {
   return (
     <Button
@@ -118,7 +135,7 @@ const TabOption = ({
         text={text}
         bgColor={currentTab == activeOn ? "bg-[#EBB7F0]" : "bg-[#F6DCF8]"}
       >
-        <Gift />
+        {icon}
       </CardOption>
     </Button>
   );
