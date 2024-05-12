@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Bell, ChevronDown, Menu, Search } from "lucide-react";
 import { Button } from "./ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import Link from "next/link";
 
 const NavMenu = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -29,9 +30,15 @@ const NavMenuMobile = () => {
           </DrawerTrigger>
           <DrawerContent>
             <div className="flex flex-col gap-4">
-              <NavItem> Card by Category</NavItem>
-              <NavItem>Card by Credit Score</NavItem>
-              <NavItem>Card by Credit Issuer</NavItem>
+              <NavItem>
+                <Link href="/categories">Card by Category</Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/">Card by Credit Score</Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/">Card by Credit Issuer</Link>
+              </NavItem>
             </div>
           </DrawerContent>
         </Drawer>
@@ -46,9 +53,15 @@ const NavMenuDesktop = () => {
       <div className="w-full px-14 items-center flex flex-row justify-between">
         <Image src="/logo.png" alt="logo" width={262} height={109} />
         <div className="flex h-10 gap-2">
-          <NavItem> Card by Category</NavItem>
-          <NavItem>Card by Credit Score</NavItem>
-          <NavItem>Card by Credit Issuer</NavItem>
+          <NavItem>
+            <Link href="/categories">Card by Category</Link>
+          </NavItem>
+          <NavItem>
+            <Link href="/">Card by Credit Score</Link>
+          </NavItem>
+          <NavItem>
+            <Link href="/">Card by Credit Issuer</Link>
+          </NavItem>
         </div>
       </div>
     </nav>
