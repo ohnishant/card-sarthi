@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "key": "axis-aura-cc",
+    "name": "Axis Aura CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  },
+  {
+    "id": "2",
+    "key": "axis-flipkart-cc",
+    "name": "Axis Flipkart CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 500,
+    "annual_fee": 500,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Earn 4% Cashback on Swiggy, Uber, PVR, Cleartrip, Curefit and Tata Play",
+      "Earn 5% Unlimited Cashback on Flipkart spends."
+    ],
+    "welcome_offer": [],
+    "benefits": [
+      "Earn 4% Cashback on Swiggy, Uber, PVR, Cleartrip, Curefit and Tata Play",
+      "Earn 5% Unlimited Cashback on Flipkart spends.",
+      "Get 1.5% Cashback on all other spends. Cashback will be credited directly in your credit card statement",
+      "Enjoy 4 Complimentary lounge visits within India (4 Lounge access in a year)",
+      "Get 1% fuel surcharge waiver on fuel purchases at all fuel stations across India.",
+      "Get Flipkart gift card worth Rs 500 on your first transaction with your Flipkart Axis credit card. (within 30 days of card issuance) (Not applicable for lifetime free cards)"
+    ]
+  },
+  {
+    "id": "3",
+    "key": "axis-indian-oil-rupay-cc",
+    "name": "Axis Indian Oil Rupay Credit Card",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  },
+  {
+    "id": "4",
+    "key": "axis-aura-cc",
+    "name": "Axis Aura CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  },
+  {
+    "id": "5",
+    "key": "axis-aura-cc",
+    "name": "Axis Aura CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  },
+  {
+    "id": "6",
+    "key": "axis-aura-cc",
+    "name": "Axis Aura CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  },
+  {
+    "id": "7",
+    "key": "axis-aura-cc",
+    "name": "Axis Aura CC",
+    "tags": ["shopping", "rewards"],
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "20% Discount on dining",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [],
+    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+  }
+]
