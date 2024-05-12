@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import CategoryOptions from "./_components/CategoryOptions";
+import Results from "./_components/Results";
 
 const Page = () => {
   // Have to wrap content in suspense because the page would not load otherwise due to useSearchParams()
@@ -27,6 +28,7 @@ const Content = () => {
         secondary
       />
       <CategoryOptions />
+      <Results />
     </>
   );
 };
