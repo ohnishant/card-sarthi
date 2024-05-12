@@ -115,7 +115,11 @@ const DesktopCardOptions = () => {
       <TabsList className="h-auto py-10 bg-[#FDF9F0] w-full">
         <div className="container flex flex-row justify-around flex-wrap">
           {options.map((option) => (
-            <TabsTrigger key={option.key} value={option.key}>
+            <TabsTrigger
+              className="data-[state=active]:bg-transparent"
+              key={option.key}
+              value={option.key}
+            >
               <CardOption text={option.title} bgColor="bg-[#FFE1A0]">
                 {option.icon}
               </CardOption>
