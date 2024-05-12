@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import CategoryOptions from "./_components/CategoryOptions";
 
 const Page = () => {
   // Have to wrap content in suspense because the page would not load otherwise due to useSearchParams()
@@ -25,6 +26,7 @@ const Content = () => {
         desktopImageURI={heroDetails.img}
         secondary
       />
+      <CategoryOptions />
     </>
   );
 };
