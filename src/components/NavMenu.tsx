@@ -14,7 +14,9 @@ const NavMenu = () => {
 const NavMenuMobile = () => {
   return (
     <nav className="flex justify-between items-center p-4">
-      <Image src="/logo.png" alt="logo" width={200} height={80} />
+      <Link href="/">
+        <Image src="/logo.png" alt="logo" width={200} height={80} />
+      </Link>
       <div className="flex gap-4 justify-around items-center">
         <Button variant="ghost" className="py-4">
           <Search size={40} />
@@ -51,7 +53,9 @@ const NavMenuDesktop = () => {
   return (
     <nav className="flex items-center h-28 justify-center">
       <div className="w-full px-14 items-center flex flex-row justify-between">
-        <Image src="/logo.png" alt="logo" width={262} height={109} />
+        <Link href="/">
+          <Image src="/logo.png" alt="logo" width={262} height={109} />
+        </Link>
         <div className="flex h-10 gap-2">
           <NavItem>
             <Link href="/categories">Card by Category</Link>
