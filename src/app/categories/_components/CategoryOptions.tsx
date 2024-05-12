@@ -5,6 +5,16 @@ import { Gift } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 
+const validTabs = [
+  "reward_card",
+  "no_annual_fee",
+  "lounge",
+  "cashback",
+  "shopping",
+  "travel",
+  "dine",
+];
+
 const CategoryOptions = () => {
   const [selectedTab, setSelectedTab] = React.useState("reward_card");
   const searchParams = useSearchParams();
@@ -13,26 +23,30 @@ const CategoryOptions = () => {
   const pathname = usePathname();
 
   function handleTabChange(tab: string) {
-    // now you got a read/write object
     const current = new URLSearchParams(Array.from(searchParams.entries())); // -> has to use this form
-
-    // update as necessary
     const value = tab;
 
-    if (!value) {
+    if (!value || !validTabs.includes(value)) {
+      // default to reward_card
       current.delete("category");
+      setSelectedTab("reward_card");
     } else {
       current.set("category", tab);
       setSelectedTab(tab);
     }
 
-    // cast to string
     const search = current.toString();
-    // or const query = `${'?'.repeat(search.length && 1)}${search}`;
     const query = search ? `?${search}` : "";
-
     router.push(`${pathname}${query}`);
   }
+
+  React.useEffect(() => {
+    if (validTabs.includes(category)) {
+      setSelectedTab(category);
+    } else {
+      setSelectedTab("reward_card");
+    }
+  }, [category]);
 
   return (
     <div className="bg-[#FEF7FF]">
