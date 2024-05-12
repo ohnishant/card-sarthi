@@ -17,9 +17,6 @@ export default function Home() {
         <Reviews />
         <Connect />
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }
