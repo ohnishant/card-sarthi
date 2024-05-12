@@ -1,8 +1,18 @@
 "use client";
 import Hero from "@/components/Hero";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 const Page = () => {
+  // Have to wrap content in suspense because the page would not load otherwise due to useSearchParams()
+  // https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+  return (
+    <Suspense>
+      <Content />
+    </Suspense>
+  );
+};
+const Content = () => {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || "reward_card";
   const heroDetails = heroes[category] || heroes["reward_card"];
