@@ -1,6 +1,6 @@
 "use client";
 
-import getCardsByBankAndType from "@/actions/getCardsByBankAndType";
+import getCardsByBankAndType, { Card } from "@/actions/getCardsByBankAndType";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -20,14 +20,14 @@ const Results = () => {
   const _bank = searchParams.get("bank") || "";
   const bank = validBanks.includes(_bank) ? _bank : "";
   const category = searchParams.get("category") || "";
-  const [cards, setCards] = React.useState([]);
+  const [cards, setCards] = React.useState<Card[]>([]);
 
   React.useEffect(() => {
     fetchCards(bank, category);
   }, [bank, category]);
 
   async function fetchCards(bank: string, category: string) {
-    const fetchedCards = await getCardsByBankAndType(bank, category);
+    const fetchedCards: Card[] = await getCardsByBankAndType(bank, category);
     console.log(fetchedCards);
     setCards(fetchedCards as any);
   }
@@ -36,22 +36,25 @@ const Results = () => {
     <div className="flex flex-row container gap-2 my-4">
       <BankOptions />
       <div className="bg-red-100 w-full rounded-md">
-        {cards.map((card) => (
-          <div key={card.id} className="flex flex-row gap-2 p-2">
-            <div className="w-24 h-24 bg-gray-200">
-              <Image
-                src={`/cardImages/${card.key}.jpg`}
-                alt={card.name}
-                width={200}
-                height={200}
-              />
+        {cards.map((card) => {
+          // TODO: Fix this
+          card.key ? card.key : "placeholder";
+          return (
+            <div key={card.id} className="flex flex-row gap-2 p-2">
+              <div className="w-24 h-24 bg-gray-200">
+                <Image
+                  src={`/cardImages/${card.key}.jpg`}
+                  alt={card.name}
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <div className="text-lg font-semibold">{card.name}</div>
+              </div>
             </div>
-            <div className="flex flex-col gap-1">
-              <div className="text-lg font-semibold">{card.name}</div>
-              <div className="text-sm">{card.description}</div>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

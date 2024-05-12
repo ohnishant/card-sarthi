@@ -1,7 +1,7 @@
 "use server";
 import _cards from "./available_cards.json";
 
-interface Card {
+export interface Card {
   bank: string;
   id: string;
   key: string;
