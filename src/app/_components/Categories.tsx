@@ -35,39 +35,39 @@ const Categories = () => {
 const categories = [
   {
     id: 1,
-    name: "Travel",
+    name: "Shopping",
     icon: <ShoppingCart />,
-    href: "/",
+    href: "/categories?category=shopping",
   },
   {
     id: 2,
     name: "Cashback",
     icon: <BadgeDollarSign />,
-    href: "/",
+    href: "/categories?category=cashback",
   },
   {
     id: 3,
     name: "Lounge",
     icon: <Armchair />,
-    href: "/",
+    href: "/categories?category=lounge",
   },
   {
     id: 4,
     name: "Travel",
     icon: <Backpack />,
-    href: "/",
+    href: "/categories?category=travel",
   },
   {
     id: 5,
     name: "Dine in",
     icon: <UtensilsCrossed />,
-    href: "/",
+    href: "/categories?category=dine",
   },
   {
     id: 6,
     name: "Movie",
     icon: <Clapperboard />,
-    href: "/",
+    href: "/categories?category=movie",
   },
 ];
 
