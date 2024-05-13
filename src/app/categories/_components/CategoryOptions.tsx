@@ -58,7 +58,7 @@ const CategoryOptions = () => {
 
   return (
     <div className="bg-[#FEF7FF]">
-      <div className="container flex flex-row items-center py-10 md:justify-between overflow-scroll">
+      <div className="container flex flex-row items-center py-10 md:justify-between overflow-scroll no-scrollbar">
         <TabOption
           text="Reward"
           currentTab={selectedTab}
