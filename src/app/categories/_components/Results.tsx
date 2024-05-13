@@ -1,6 +1,8 @@
 "use client";
 
-import getCardsByBankAndType, { Card } from "@/actions/getCardsByBankAndType";
+import getCardsByBankAndType, {
+  CardType,
+} from "@/actions/getCardsByBankAndType";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -22,14 +24,17 @@ const Results = () => {
   const _bank = searchParams.get("bank") || "";
   const bank = validBanks.includes(_bank) ? _bank : "";
   const category = searchParams.get("category") || "";
-  const [cards, setCards] = React.useState<Card[]>([]);
+  const [cards, setCards] = React.useState<CardType[]>([]);
 
   React.useEffect(() => {
     fetchCards(bank, category);
   }, [bank, category]);
 
   async function fetchCards(bank: string, category: string) {
-    const fetchedCards: Card[] = await getCardsByBankAndType(bank, category);
+    const fetchedCards: CardType[] = await getCardsByBankAndType(
+      bank,
+      category,
+    );
     console.log(fetchedCards);
     setCards(fetchedCards as any);
   }
@@ -79,7 +84,7 @@ const BankOptions = () => {
     }
   }, [category]);
   return (
-    <div className="w-[216px]">
+    <div className="w-[216px] hidden md:block">
       <div className="text-[1.5rem] font-semibold">Select Bank</div>
       <div className="flex flex-col gap-0.5 mt-4">
         {banks.map((bank) => {

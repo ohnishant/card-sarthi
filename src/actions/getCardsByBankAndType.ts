@@ -1,7 +1,7 @@
 "use server";
 import _cards from "./available_cards.json";
 
-export interface Card {
+export interface CardType {
   bank: string;
   id: string;
   stars: number;
@@ -18,12 +18,12 @@ export interface Card {
   benefits: string[];
 }
 
-const cards: Card[] = _cards;
+const cards: CardType[] = _cards;
 
 export default async function getCardsByBankAndType(
   bank: string,
   type: string,
-): Promise<Card[]> {
+): Promise<CardType[]> {
   const cardByType = cards.filter((card) => card.tags.includes(type));
   if (!bank) {
     return cardByType;

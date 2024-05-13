@@ -1,10 +1,125 @@
-import { Card } from "@/actions/getCardsByBankAndType";
+"use cient";
+import { CardType } from "@/actions/getCardsByBankAndType";
 import { Button } from "@/components/ui/button";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const CardCard = ({ details }: { details: Card }) => {
+const CardCard = ({ details }: { details: CardType }) => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  return isDesktop ? (
+    <DesktopCard details={details} />
+  ) : (
+    <MobileCard details={details} />
+  );
+};
+
+const MobileCard = ({ details }: { details: CardType }) => {
+  return (
+    <div className="flex flex-col p-4 gap-4 justify-between rounded-md w-full min-h-56 bg-[#FCF4E3]">
+      <div className="min-h-36 bg-green-30">
+        <div className="flex gap-2">
+          <ImageWithFallback
+            src={`/cardImages/${details.key}.jpg`}
+            fallbackSrc="/cardImages/placeholder.png"
+            width={100}
+            height={60}
+            alt={details.name}
+            className="rounded-md max-h-[100px]"
+          />
+          <div>
+            <div className="text-l font-semibold">{details.name}</div>
+            <div className="text-sm">{details.tags.join(", ")}</div>
+            <div>
+              <div className="flex">
+                <Image
+                  src="/favicon.png"
+                  width={20}
+                  alt="Card Sarthi"
+                  height={29}
+                />
+                {[...Array(5)].map((_, i) =>
+                  details.stars > i ? (
+                    <Star
+                      key={i}
+                      strokeWidth={1}
+                      size={14}
+                      fill="#EEB541"
+                      stroke="#EEB541"
+                    />
+                  ) : (
+                    <Star key={i} strokeWidth={1} size={14} fill="none" />
+                  ),
+                )}
+                <span className="text-xs font-semibold">{details.stars}/5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row justify-between">
+          <div>
+            <div className="my-2">
+              Annual Fee:{" "}
+              <span className="font-semibold">{details.annual_fee}</span>
+            </div>
+            <div className="my-2">
+              Joining Fee:{" "}
+              <span className="font-semibold">{details.joining_fee}</span>
+            </div>
+            <div className="my-2">
+              Credit Score:{" "}
+              <span className="font-semibold">{details.credit_score}</span>
+              <span className="font-extralight">(min req)</span>
+            </div>
+          </div>
+          <div className="max-w-[121px] flex flex-col gap-2">
+            <Button className="w-full h-[25px]">Apply Now</Button>
+            <Button
+              variant="secondary"
+              className="w-full outline outline-1 h-[25px] bg-transparent"
+            >
+              Check Eligibility
+            </Button>
+          </div>
+        </div>
+      </div>
+      <Accordion type="single" collapsible>
+        <AccordionItem value="features">
+          <AccordionTrigger className="bg-[#FFE0A0] rounded-t flex justify-center items-center">
+            Features
+          </AccordionTrigger>
+          <AccordionContent className="bg-[#FFE0A0] rounded-b">
+            <ul className="list-disc list-outside pl-10">
+              {details.features.map((feature, id) => (
+                <li key={id}>{feature}</li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="welcome_offers">
+          <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
+            Welcome Offers
+          </AccordionTrigger>
+          <AccordionContent className="bg-[#FFE0A0] rounded-b">
+            <ul className="list-disc list-outside p-10">
+              {details.welcome_offer.map((offer, id) => (
+                <li key={id}>{offer}</li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  );
+};
+const DesktopCard = ({ details }: { details: CardType }) => {
   return (
     <div className="flex flex-col lg:flex-row p-4 justify-between rounded-md w-full min-h-96 bg-[#FCF4E3]">
       <div className="flex flex-col w-full gap-2">
