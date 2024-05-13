@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 import Image from "next/image";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import CardCard from "@/components/CardCard";
 
 const validBanks = ["axis", "hdfc", "idfc", "kotak_mahindra"];
 const banks = [
@@ -35,25 +37,9 @@ const Results = () => {
   return (
     <div className="flex flex-row container gap-2 my-4">
       <BankOptions />
-      <div className="bg-red-100 w-full rounded-md">
+      <div className="flex flex-col gap-3 w-full rounded-md">
         {cards.map((card) => {
-          // TODO: Fix this
-          card.key ? card.key : "placeholder";
-          return (
-            <div key={card.id} className="flex flex-row gap-2 p-2">
-              <div className="w-24 h-24 bg-gray-200">
-                <Image
-                  src={`/cardImages/${card.key}.jpg`}
-                  alt={card.name}
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="text-lg font-semibold">{card.name}</div>
-              </div>
-            </div>
-          );
+          return <CardCard key={card.id} details={card} />;
         })}
       </div>
     </div>

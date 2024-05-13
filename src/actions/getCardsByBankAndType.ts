@@ -4,6 +4,7 @@ import _cards from "./available_cards.json";
 export interface Card {
   bank: string;
   id: string;
+  stars: number;
   key: string;
   name: string;
   tags: string[];
