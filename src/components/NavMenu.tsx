@@ -5,6 +5,8 @@ import { Bell, ChevronDown, Menu, Search } from "lucide-react";
 import { Button } from "./ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const NavMenu = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -50,6 +52,7 @@ const NavMenuMobile = () => {
 };
 
 const NavMenuDesktop = () => {
+  const pathName = usePathname();
   return (
     <nav className="flex items-center h-28 justify-center">
       <div className="w-full px-14 items-center flex flex-row justify-between">
@@ -58,13 +61,37 @@ const NavMenuDesktop = () => {
         </Link>
         <div className="flex h-10 gap-2">
           <NavItem>
-            <Link href="/categories">Card by Category</Link>
+            <Link
+              href="/categories"
+              className={cn(
+                " hover:underline",
+                pathName.startsWith("/categories") ? "underline" : "",
+              )}
+            >
+              Card by Category
+            </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">Card by Credit Score</Link>
+            <Link
+              href="/"
+              className={cn(
+                " hover:underline",
+                pathName.startsWith("/credit-score") ? "underline" : "",
+              )}
+            >
+              Card by Credit Score
+            </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">Card by Credit Issuer</Link>
+            <Link
+              href="/"
+              className={cn(
+                " hover:underline",
+                pathName.startsWith("/issuer") ? "underline" : "",
+              )}
+            >
+              Card by Credit Issuer
+            </Link>
           </NavItem>
         </div>
       </div>
