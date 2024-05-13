@@ -23,7 +23,7 @@ const Results = () => {
   const searchParams = useSearchParams();
   const _bank = searchParams.get("bank") || "";
   const bank = validBanks.includes(_bank) ? _bank : "";
-  const category = searchParams.get("category") || "";
+  const category = searchParams.get("category") || "reward_card";
   const [cards, setCards] = React.useState<CardType[]>([]);
 
   React.useEffect(() => {
