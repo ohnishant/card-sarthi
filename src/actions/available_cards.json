@@ -69,71 +69,83 @@
     "bank": "axis",
     "tags": ["shopping", "reward_card"],
     "id": "4",
-    "key": "axis-aura-cc",
-    "name": "Axis Aura CC",
+    "key": "axis-iocl-cc",
+    "name": "Axis IOCL CC",
     "credit_score": 700,
     "stars": 4,
-    "joining_fee": 749,
-    "annual_fee": 749,
+    "joining_fee": 500,
+    "annual_fee": 500,
     "interest_rate": 3.6,
     "withdrawal_fee": 2.5,
     "features": [
-      "20% Discount on dining",
-      "Accelerated Edge Points - 5x",
-      "Min 30% discount on diet consultation"
+      "Up to 15% dining discounts at partner restaurants in India via EazyDiner",
+      "1% value back on online shopping by earning 5 rewards points per INR 100 spent",
+      "Earn 1 EDGE REWARD point on INR 100 spend with your credit card"
     ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": [
+      "100% Cashback up to Rs 250 on first fuel  transaction",
+      "4% value back on Fuel Spends, 20 reward points per Rs 100 spent at IOCL pumps across India",
+      "Up to 10% instant discount on movie tickets via BookMyShow app or website"
+    ]
   },
   {
     "bank": "axis",
     "id": "5",
-    "key": "axis-aura-cc",
-    "name": "Axis Aura CC",
+    "key": "axis-lic-platinum",
+    "name": "Axis LIC Platinum Card",
     "tags": ["shopping", "reward_card"],
     "credit_score": 700,
     "stars": 4,
-    "joining_fee": 749,
-    "annual_fee": 749,
+    "joining_fee": 0,
+    "annual_fee": 0,
     "interest_rate": 3.6,
     "withdrawal_fee": 2.5,
     "features": [
-      "20% Discount on dining",
-      "Accelerated Edge Points - 5x",
-      "Min 30% discount on diet consultation"
+      "Lifetime free (No Joining/ Annual fees)",
+      "2 Reward Points* for every ₹ 100 spent on LIC",
+      "Redeem rewards earned against e-vouchers , gift cards & other products "
     ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": [
+      "1% surcharge waiver on fuel spends at all petrol pumps*",
+      "Up to 20% off at 4000+ restaurants in India",
+      "Convert your transactions of Rs. 2500 or more into easy EMI"
+    ]
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": ["lounge", "reward_card"],
     "id": "6",
-    "key": "axis-aura-cc",
-    "name": "Axis Aura CC",
+    "key": "axis-lic-signature",
+    "name": "Axis LIC Signature CC",
     "credit_score": 700,
     "stars": 4,
-    "joining_fee": 749,
-    "annual_fee": 749,
+    "joining_fee": 0,
+    "annual_fee": 0,
     "interest_rate": 3.6,
     "withdrawal_fee": 2.5,
     "features": [
-      "20% Discount on dining",
-      "Accelerated Edge Points - 5x",
-      "Min 30% discount on diet consultation"
+      "Lifetime free (No Joining/ Annual fees)",
+      "2 Reward Points* for every ₹ 100 spent on LIC",
+      "Redeem rewards earned against e-vouchers , gift cards & other products "
     ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": [
+      "8 complimentary airport lounge access in a year*",
+      "1% surcharge waiver on fuel spends at all petrol pumps*",
+      "Up to 20% off at 4000+ restaurants in India"
+    ]
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": ["lounge", "reward_card"],
     "id": "7",
-    "key": "axis-aura-cc",
-    "name": "Axis Aura CC",
+    "key": "axis-magnus-cc",
+    "name": "Axis Magnus CC",
     "credit_score": 700,
-    "joining_fee": 749,
-    "annual_fee": 749,
+    "joining_fee": 12500,
+    "annual_fee": 12500,
     "stars": 4,
     "interest_rate": 3.6,
     "withdrawal_fee": 2.5,
@@ -142,7 +154,222 @@
       "Accelerated Edge Points - 5x",
       "Min 30% discount on diet consultation"
     ],
+    "welcome_offer": [
+      "Luxury brand voucher worth Rs 12,500",
+      "Unlimited Complimentary Domestic and International Lounge"
+    ],
+    "benefits": [
+      "Buy one movie/non-movie ticket and get up to Rs 500 off on the second, 5 times/month",
+      "35 EDGE REWARD points per Rs 200 spent after 1.5 lakh spend"
+    ]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping"],
+    "id": "8",
+    "key": "axis-myzone",
+    "name": "Axis Myzone- Vetted",
+    "credit_score": 700,
+    "joining_fee": 500,
+    "annual_fee": 500,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Flat Rs. 120 on food delivery at Swiggy (twice per month)",
+      "Buy 1 Get 1 Free on movie tickets",
+      "Dining Delights"
+    ],
+    "welcome_offer": ["SonyLiv Subscription worth Rs 999"],
+    "benefits": [
+      "1 Complimentary Lounge access within India/quarter",
+      "4 EDGE Rewards Points with every Rs 200 spentr"
+    ]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping", "dine", "reward_card"],
+    "id": "9",
+    "key": "axis-neo",
+    "name": "Axis Neo CC",
+    "credit_score": 700,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "5% off on Utility Bill payments – mobile recharges, broadband payment etc.",
+      "10% off on BookMyShow ",
+      "1 Edge reward point on every spend of ₹200"
+    ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": ["Save Rs. 2,880/year on food*", "10% off on Myntra everytime*"]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping", "reward_card", "lounge"],
+    "id": "10",
+    "key": "axis-privilege",
+    "name": "Axis Privilege CC",
+    "credit_score": 700,
+    "joining_fee": 1500,
+    "annual_fee": 1500,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Rs. 1000 off or more via Axis Bank Dining Delights program with EazyDiner",
+      "Accelerated Edge Points - 5x",
+      "Min 30% discount on diet consultation"
+    ],
+    "welcome_offer": [
+      "2 complimentary access to Airport lounges per calendar quarter"
+    ],
+    "benefits": [
+      "Convert Edge Points to Multi Brand vouchers twice the value after milestone",
+      "Annual fee of Rs. 1500 will be reversed on achieving spends of Rs. 2.5 lakhs",
+      "Earn AXIS EDGE REWARDS for transactions and 500+ rewards and offers to redeem points"
+    ]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping", "reward_card", "cashback"],
+    "id": "11",
+    "key": "axis-samsung-infinite",
+    "name": "Axis Samsung Infinite CC",
+    "credit_score": 700,
+    "joining_fee": 5000,
+    "annual_fee": 5000,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Complimentary 1 year free EazyDiner prime membership with your Samsung Axis"
+    ],
+    "welcome_offer": [
+      "30000 EDGE Reward Points on doing 3 transactions within 30 days"
+    ],
+    "benefits": [
+      "10% Cashback on Samsung purchases*",
+      "Accelerated Reward Points: 15 RP on every Rs 100 spent on preferred partners",
+      "8 Complimentary Lounge Access on selected Domestic airports/year"
+    ]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping", "reward_card", "dine"],
+    "id": "12",
+    "key": "axis-samsung-signature",
+    "name": "Axis Samsung Signature CC",
+    "credit_score": 700,
+    "joining_fee": 500,
+    "annual_fee": 500,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [],
+    "welcome_offer": [
+      "2500 EDGE Reward Points on doing 3 transactions within 30 days"
+    ],
+    "benefits": [
+      "10% Cashback on Samsung purchases*",
+      "Accelerated Reward Points: 15 RP on every Rs 100 spent on preferred partners",
+      "4 Complimentary Lounge Access on selected Domestic airports/year"
+    ]
+  },
+  {
+    "bank": "hdfc",
+    "tags": ["shopping", "reward_card", "lounge"],
+    "id": "13",
+    "key": "hdfc-credit-card",
+    "name": "HDFC Credit Cards",
+    "credit_score": 700,
+    "joining_fee": 749,
+    "annual_fee": 749,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Leverage revolving credit facilities at nominal interest rates",
+      "Get liability waivers on fraudulent transactions and Credit Card loss"
+    ],
+    "welcome_offer": [],
+    "benefits": [
+      "Complimentary access to airport lounges",
+      "Smart EMI : Convert credit card spends of ₹2,500 or more into Smart EMIs"
+    ]
+  },
+  {
+    "bank": "axis",
+    "tags": ["shopping", "reward_card", "dine"],
+    "id": "14",
+    "key": "axis-select",
+    "name": "Axis Select CC",
+    "credit_score": 700,
+    "joining_fee": 3000,
+    "annual_fee": 3000,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "5000 EDGE points on spending Rs 3 lakhs in a card anniversary year"
+    ],
+    "welcome_offer": [
+      "10,000 EDGE Reward points on first card transaction within 30 days of card issuance"
+    ],
+    "benefits": [
+      "10 Edge points on every Rs 200 spent",
+      "BigBasket: Up to 20% Off on Orders over Rs 2000 "
+    ]
+  },
+  {
+    "bank": "kotak_mahindra",
+    "tags": ["shopping", "reward_card"],
+    "id": "15",
+    "key": "kotak-league-platinum",
+    "name": "Kotak League Platinum CC",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "5000 EDGE points on spending Rs 3 lakhs in a card anniversary year"
+    ],
+    "welcome_offer": [
+      "Reward points worth Rs. 500, post realization of joining fee"
+    ],
+    "benefits": [
+      "Pay via UPI, its a RuPay Card!",
+      "Lifteime Free card. Nil joining & Annual fees",
+      "1% fuel surcharge waiver up to ₹3,500 annually"
+    ]
+  },
+  {
+    "bank": "idfc",
+    "tags": ["shopping", "reward_card"],
+    "id": "16",
+    "key": "idfc-club-vistara",
+    "name": "IDFC Club Vistara Card",
+    "credit_score": 700,
+    "joining_fee": 4999,
+    "annual_fee": 4999,
+    "stars": 4,
+    "interest_rate": 3.6,
+    "withdrawal_fee": 2.5,
+    "features": [
+      "Trip cancellation cover up to ₹10,000 on flight and hotel booking",
+      "12 complimentary golf lessons + 4 complimentary rounds of golf /year"
+    ],
+    "welcome_offer": [
+      "3 months complimentary EazyDiner Prime membership and BQ Prime subscription"
+    ],
+    "benefits": [
+      "Upto 6x premium economy flight tickets + 1 voucher upgrade on annual milestone",
+      "Complimentary Club Vistara Silver Membership"
+    ]
   }
 ]
+
