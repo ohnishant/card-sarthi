@@ -33,7 +33,7 @@ const StepsMobile = () => {
 };
 const StepsDesktop = () => {
   return (
-    <div className="w-full items-center justify-center flex-col my-12">
+    <div className="w-full items-center justify-center flex-col">
       <div className="flex w-full items-center justify-center">
         <div className="container flex justify-between flex-row">
           <div>

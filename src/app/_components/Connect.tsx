@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 const Connect = () => {
   return (
-    <div className="flex my-32 justify-center md:bg-[#FEEFFF80] bg-[#FDF8EE] md:py-0 py-2 w-full items-center">
+    <div className="flex justify-center md:bg-[#FEEFFF80] bg-[#FDF8EE] md:py-0 py-2 w-full items-center">
       <div className="w-[1112px] flex gap-16">
         <span className="hidden md:block">
           <Image

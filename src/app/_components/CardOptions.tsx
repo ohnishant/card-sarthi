@@ -111,8 +111,8 @@ const MobileCard: React.FC<MobileCardProps> = ({
 
 const DesktopCardOptions = () => {
   return (
-    <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
-      <TabsList className="h-auto py-10 bg-[#FDF9F0] w-full">
+    <Tabs defaultValue="creditCard" className="w-full px-8">
+      <TabsList className="h-auto py-10 mb-12 bg-[#FDF9F0] w-full">
         <div className="container flex flex-row justify-around flex-wrap">
           {options.map((option) => (
             <TabsTrigger

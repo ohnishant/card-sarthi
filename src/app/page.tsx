@@ -8,7 +8,7 @@ import Steps from "./_components/Steps";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="space-y-40">
         <Hero />
         <CardOptions />
         <Categories />
