@@ -13,7 +13,7 @@ const Connect = () => {
           />
         </span>
         <div className=" flex md:items-center md:justify-center mx-auto">
-          <div>
+          <div className="space-y-2">
             <strong className="md:text-4xl text-2xl font-medium">
               Still having problem choosing?
             </strong>
