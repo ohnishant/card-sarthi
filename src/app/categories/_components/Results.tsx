@@ -11,12 +11,14 @@ import Image from "next/image";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import CardCard from "@/components/CardCard";
 
-const validBanks = ["axis", "hdfc", "idfc", "kotak_mahindra"];
+const validBanks = ["axis", "hdfc", "idfc", "au_bank", "yes", "sbi"];
 const banks = [
+  { name: "AU Bank", value: "au_bank" },
+  { name: "Yes Bank", value: "yes" },
+  { name: "IDFC Bank", value: "idfc" },
+  { name: "SBI Card", value: "sbi" },
   { name: "Axis Bank", value: "axis" },
   { name: "HDFC Bank", value: "hdfc" },
-  { name: "IDFC Bank", value: "idfc" },
-  { name: "Kotak Mahindra Bank", value: "kotak_mahindra" },
 ];
 
 const Results = () => {
