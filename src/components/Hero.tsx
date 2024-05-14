@@ -17,7 +17,7 @@ const Hero = ({
   secondary?: boolean;
 }) => {
   return (
-    <div className="flex items-center justify-center flex-row px-8">
+    <div className="flex items-center justify-center flex-row">
       <div className="mt-4 lg:container xl:container 2xl:container flex grow flex-col gap-4 md:flex-row justify-center items-center">
         <div
           className={cn(
