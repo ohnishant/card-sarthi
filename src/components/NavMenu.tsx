@@ -41,7 +41,7 @@ const NavMenuMobile = () => {
                 <Link href="/">Card by Credit Score</Link>
               </NavItem>
               <NavItem>
-                <Link href="/">Card by Credit Destroyer</Link>
+                <Link href="/">Card by Credit Issuer</Link>
               </NavItem>
             </div>
           </DrawerContent>
