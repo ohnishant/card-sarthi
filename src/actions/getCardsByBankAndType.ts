@@ -11,8 +11,8 @@ export interface CardType {
   credit_score: number;
   joining_fee: number;
   annual_fee: number;
-  interest_rate: number;
-  withdrawal_fee: number;
+  interest_rate?: number;
+  withdrawal_fee?: number;
   features: string[];
   welcome_offer: string[];
   benefits: string[];
