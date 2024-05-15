@@ -89,25 +89,31 @@ const BankOptions = () => {
     <div className="w-[216px] hidden md:block">
       <div className="text-[1.5rem] font-semibold">Select Bank</div>
       <div className="flex flex-col gap-0.5 mt-4">
-        {banks.map((bank) => {
-          return (
-            <div key={bank.value} className="w-full flex flex-row">
-              {selectedBank === bank.value && (
-                <div className="w-2 bg-yellow-400"></div>
-              )}
-              <Button
-                className={cn(
-                  "text-[1rem] justify-start text-wrap w-full h-auto text-left rounded-none bg-white text-black hover:bg-white hover:text-black pl-0",
-                  selectedBank === bank.value && "text-black pl-2",
+        {[...banks]
+          .sort((a, b) => {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+          })
+          .map((bank) => {
+            return (
+              <div key={bank.value} className="w-full flex flex-row">
+                {selectedBank === bank.value && (
+                  <div className="w-2 bg-yellow-400"></div>
                 )}
-                key={bank.value}
-                onClick={() => handleBankChange(bank.value)}
-              >
-                {bank.name}
-              </Button>
-            </div>
-          );
-        })}
+                <Button
+                  className={cn(
+                    "text-[1rem] justify-start text-wrap w-full h-auto text-left rounded-none bg-white text-black hover:bg-white hover:text-black pl-0",
+                    selectedBank === bank.value && "text-black pl-2",
+                  )}
+                  key={bank.value}
+                  onClick={() => handleBankChange(bank.value)}
+                >
+                  {bank.name}
+                </Button>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

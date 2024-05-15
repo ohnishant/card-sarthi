@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Categories = () => {
   return (
-    <div className="flex flex-col bg-[#FEEFFF80] my-16 justify-center py-12 gap-8 items-center">
+    <div className="flex flex-col bg-[#FEEFFF80] justify-center py-12 gap-8 items-center">
       <strong className="text-4xl font-semibold text-center">
         Our Best Categories
       </strong>

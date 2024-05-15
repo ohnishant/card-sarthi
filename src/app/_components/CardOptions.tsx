@@ -79,7 +79,7 @@ const MobileCard: React.FC<MobileCardProps> = ({
   linkOutline,
 }) => {
   return (
-    <CarouselItem className="basis-3/4 md:basis-1/3 h-full">
+    <CarouselItem className="sm:basis-8/12 h-full">
       <div className="p-1 h-full">
         <Card className="bg-[#FDF8EE] h-full outline-none">
           <CardHeader>
@@ -93,12 +93,15 @@ const MobileCard: React.FC<MobileCardProps> = ({
           </CardContent>
           <CardFooter className="flex flex-col items-center gap-2">
             <div className="w-full">
-              <Button className="w-full bg-[#FFD37A] text-black hover:bg-[#FFD37A] rounded-none">
+              <Button className="w-full bg-[#FFD37A] text-black text-wrap h-auto hover:bg-[#FFD37A] rounded-none">
                 {button}
               </Button>
             </div>
             <div className="w-full">
-              <Button variant="outline" className="w-full rounded-none">
+              <Button
+                variant="outline"
+                className="w-full rounded-none text-wrap h-auto"
+              >
                 {buttonOutline}
               </Button>
             </div>
@@ -111,8 +114,8 @@ const MobileCard: React.FC<MobileCardProps> = ({
 
 const DesktopCardOptions = () => {
   return (
-    <Tabs defaultValue="creditCard" className="w-full px-8 my-11">
-      <TabsList className="h-auto py-10 bg-[#FDF9F0] w-full">
+    <Tabs defaultValue="creditCard" className="w-full px-8">
+      <TabsList className="h-auto py-10 mb-12 bg-[#FDF9F0] w-full">
         <div className="container flex flex-row justify-around flex-wrap">
           {options.map((option) => (
             <TabsTrigger

@@ -17,19 +17,19 @@ const NavMenuMobile = () => {
   return (
     <nav className="flex justify-between items-center p-4">
       <Link href="/">
-        <Image src="/logo.png" alt="logo" width={200} height={80} />
+        <Image src="/logo.png" alt="logo" width={150} height={50} />
       </Link>
-      <div className="flex gap-4 justify-around items-center">
+      <div className="flex justify-end items-center">
         <Button variant="ghost" className="py-4">
-          <Search size={40} />
+          <Search size={20} />
         </Button>
         <Button variant="ghost" className="py-4">
-          <Bell size={40} />
+          <Bell size={20} />
         </Button>
         <Drawer direction="right">
           <DrawerTrigger asChild>
             <Button variant="ghost" className="py-4">
-              <Menu size={40} />
+              <Menu size={20} />
             </Button>
           </DrawerTrigger>
           <DrawerContent>
