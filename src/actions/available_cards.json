@@ -445,7 +445,7 @@
     ],
     "id": "17",
     "key": "au-zenith-card",
-    "name": "Axis Zenith Credit Card",
+    "name": "AU Zenith Credit Card",
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 7999,
@@ -462,7 +462,7 @@
     "welcome_offer": [
     ],
     "benefits": [
-      "INR 1,000 vouchers on minimum INR 2 lakh retail spends done per calendar quarter. Choose your vouchers from a bouquet of top brands."
+      "INR 1,000 vouchers on minimum INR 2 lakh retail spends done per calendar quarter. Choose your vouchers from a bouquet of top brands.",
       "Complimentary Epicure Membership on minimum of INR 8 lakh retail spends in a card anniversary year."
     ]
   }
@@ -472,7 +472,7 @@
     "tags": [
       "shopping",
       "reward_card",
-      "lounge",
+      "lounge"
     ],
     "id": "18",
     "key": "au-vetta-card",
@@ -501,7 +501,7 @@
     "tags": [
       "cashback",
       "reward_card",
-      "lounge",
+      "lounge"
     ],
     "id": "19",
     "key": "au-altura-plus-card",
@@ -529,7 +529,7 @@
     "bank": "au",
     "tags": [
       "cashback",
-      "lounge",
+      "lounge"
     ],
     "id": "20",
     "key": "au-altura-card",
@@ -566,7 +566,7 @@
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 0,
-    "stars": 2,
+    "stars": 3,
     "features": [
       "Milestone Cashback",
         "Fitness Memberships",
