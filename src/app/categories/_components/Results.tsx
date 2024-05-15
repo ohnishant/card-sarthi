@@ -89,8 +89,8 @@ const BankOptions = () => {
     <div className="w-[216px] hidden md:block">
       <div className="text-[1.5rem] font-semibold">Select Bank</div>
       <div className="flex flex-col gap-0.5 mt-4">
-        {banks
-          .toSorted((a, b) => {
+        {[...banks]
+          .sort((a, b) => {
             if (a.name < b.name) return -1;
             if (a.name > b.name) return 1;
             return 0;
