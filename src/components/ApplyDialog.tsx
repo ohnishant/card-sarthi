@@ -15,11 +15,11 @@ import { useState } from "react";
 const ApplyDialog = ({
   title,
   children,
-  id,
+  key,
 }: {
   title: string;
   children: React.ReactNode;
-  id: string;
+  key: string;
 }) => {
   // TODO: React Hook Form with zod validation here
   const [pan, setPan] = useState("");
@@ -36,7 +36,7 @@ const ApplyDialog = ({
       email,
       pincode,
     };
-    console.log(`Form submitted with data: ${JSON.stringify(data)} for ${id}`);
+    console.log(`Form submitted with data: ${JSON.stringify(data)} for ${key}`);
   }
 
   return (

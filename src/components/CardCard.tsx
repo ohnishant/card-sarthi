@@ -193,7 +193,7 @@ const DesktopCard = ({ details }: { details: CardType }) => {
         </div>
       </div>
       <div className="w-[201px] py-12 gap-6 flex flex-col text-xl">
-        <ApplyDialog title={details.name}>
+        <ApplyDialog title={details.name} key={details.key}>
           <Button className="w-full text-lg">Apply Now</Button>
         </ApplyDialog>
         <Button
