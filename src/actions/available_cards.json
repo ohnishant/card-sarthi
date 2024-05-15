@@ -1,7 +1,10 @@
 [
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "1",
     "key": "axis-aura-cc",
     "name": "Axis Aura CC",
@@ -17,11 +20,17 @@
       "Min 30% discount on diet consultation"
     ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": [
+      "1% fuel surcharge waiver",
+      "1% fuel surcharge waiver"
+    ]
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "2",
     "key": "axis-flipkart-cc",
     "name": "Axis Flipkart CC",
@@ -47,7 +56,10 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "3",
     "key": "axis-indian-oil-rupay-cc",
     "name": "Axis Indian Oil Rupay Credit Card",
@@ -63,11 +75,17 @@
       "Min 30% discount on diet consultation"
     ],
     "welcome_offer": [],
-    "benefits": ["1% fuel surcharge waiver", "1% fuel surcharge waiver"]
+    "benefits": [
+      "1% fuel surcharge waiver",
+      "1% fuel surcharge waiver"
+    ]
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "4",
     "key": "axis-iocl-cc",
     "name": "Axis IOCL CC",
@@ -94,7 +112,10 @@
     "id": "5",
     "key": "axis-lic-platinum",
     "name": "Axis LIC Platinum Card",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "credit_score": 700,
     "stars": 4,
     "joining_fee": 0,
@@ -115,7 +136,10 @@
   },
   {
     "bank": "axis",
-    "tags": ["lounge", "reward_card"],
+    "tags": [
+      "lounge",
+      "reward_card"
+    ],
     "id": "6",
     "key": "axis-lic-signature",
     "name": "Axis LIC Signature CC",
@@ -139,7 +163,10 @@
   },
   {
     "bank": "axis",
-    "tags": ["lounge", "reward_card"],
+    "tags": [
+      "lounge",
+      "reward_card"
+    ],
     "id": "7",
     "key": "axis-magnus-cc",
     "name": "Axis Magnus CC",
@@ -165,7 +192,9 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping"],
+    "tags": [
+      "shopping"
+    ],
     "id": "8",
     "key": "axis-myzone",
     "name": "Axis Myzone- Vetted",
@@ -180,7 +209,9 @@
       "Buy 1 Get 1 Free on movie tickets",
       "Dining Delights"
     ],
-    "welcome_offer": ["SonyLiv Subscription worth Rs 999"],
+    "welcome_offer": [
+      "SonyLiv Subscription worth Rs 999"
+    ],
     "benefits": [
       "1 Complimentary Lounge access within India/quarter",
       "4 EDGE Rewards Points with every Rs 200 spentr"
@@ -188,7 +219,11 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "dine", "reward_card"],
+    "tags": [
+      "shopping",
+      "dine",
+      "reward_card"
+    ],
     "id": "9",
     "key": "axis-neo",
     "name": "Axis Neo CC",
@@ -204,11 +239,18 @@
       "1 Edge reward point on every spend of ₹200"
     ],
     "welcome_offer": [],
-    "benefits": ["Save Rs. 2,880/year on food*", "10% off on Myntra everytime*"]
+    "benefits": [
+      "Save Rs. 2,880/year on food*",
+      "10% off on Myntra everytime*"
+    ]
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card", "lounge"],
+    "tags": [
+      "shopping",
+      "reward_card",
+      "lounge"
+    ],
     "id": "10",
     "key": "axis-privilege",
     "name": "Axis Privilege CC",
@@ -234,7 +276,11 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card", "cashback"],
+    "tags": [
+      "shopping",
+      "reward_card",
+      "cashback"
+    ],
     "id": "11",
     "key": "axis-samsung-infinite",
     "name": "Axis Samsung Infinite CC",
@@ -258,7 +304,11 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card", "dine"],
+    "tags": [
+      "shopping",
+      "reward_card",
+      "dine"
+    ],
     "id": "12",
     "key": "axis-samsung-signature",
     "name": "Axis Samsung Signature CC",
@@ -280,7 +330,11 @@
   },
   {
     "bank": "hdfc",
-    "tags": ["shopping", "reward_card", "lounge"],
+    "tags": [
+      "shopping",
+      "reward_card",
+      "lounge"
+    ],
     "id": "13",
     "key": "hdfc-credit-card",
     "name": "HDFC Credit Cards",
@@ -302,7 +356,11 @@
   },
   {
     "bank": "axis",
-    "tags": ["shopping", "reward_card", "dine"],
+    "tags": [
+      "shopping",
+      "reward_card",
+      "dine"
+    ],
     "id": "14",
     "key": "axis-select",
     "name": "Axis Select CC",
@@ -325,7 +383,10 @@
   },
   {
     "bank": "kotak_mahindra",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "15",
     "key": "kotak-league-platinum",
     "name": "Kotak League Platinum CC",
@@ -349,7 +410,10 @@
   },
   {
     "bank": "idfc",
-    "tags": ["shopping", "reward_card"],
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
     "id": "16",
     "key": "idfc-club-vistara",
     "name": "IDFC Club Vistara Card",
@@ -370,6 +434,151 @@
       "Upto 6x premium economy flight tickets + 1 voucher upgrade on annual milestone",
       "Complimentary Club Vistara Silver Membership"
     ]
+  },
+  {
+    "bank": "au",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "lounge",
+      "dine"
+    ],
+    "id": "17",
+    "key": "au-zenith-card",
+    "name": "Axis Zenith Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 7999,
+    "stars": 5,
+    "features": [
+      "20% Discount on dining",
+      "Premium Lifestyle - Loaded Rewards on every spend",
+      "Luxury Hotel Membership",
+      "Complimentary Lounge access and Global Concierge",
+      "Lower Currency Mark-up fee at 1.99 %",
+      "Comprehensive Insurance Cover on Card",
+      "Rs.70,000+ Yearly Benefits on just Rs.75,000 monthly spends!"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "INR 1,000 vouchers on minimum INR 2 lakh retail spends done per calendar quarter. Choose your vouchers from a bouquet of top brands."
+      "Complimentary Epicure Membership on minimum of INR 8 lakh retail spends in a card anniversary year."
+    ]
+  }
+  ,
+  {
+    "bank": "au",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "lounge",
+    ],
+    "id": "18",
+    "key": "au-vetta-card",
+    "name": "Axis Vetta Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 2999,
+    "stars": 4,
+    "features": [
+      "Multi-Rewards - Lifestyle benefits",
+      "Accelerated Reward Points on Utility Bill payments, Grocery - Departmental Stores",
+      "Complimentary Lounge access - Global Concierge",
+      "Comprehensive Insurance Cover on Card",
+      "Rs.25,000+ Yearly Benefits on just Rs.35,000 monthly spends!"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "For 1st year fee waiver – Rs.40,000 retail spends done within 90 days of card set up",
+    "For 2nd year onwards fee waiver – Rs. 1,50,000 retail spends done in previous card anniversary year"
+    ]
+  }
+  ,
+  {
+    "bank": "au",
+    "tags": [
+      "cashback",
+      "reward_card",
+      "lounge",
+    ],
+    "id": "19",
+    "key": "au-altura-plus-card",
+    "name": "Axis Altura Plus Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 499,
+    "stars": 3,
+    "features": [
+      "Double the Delight. Earn both Cashback - Reward Points",
+      "Attractive Monthly Milestone Benefits",
+      "Complimentary Railway Lounge access",
+      "Complimentary Lost Card Liability cover",
+      "Rs.4,000+ Yearly Benefits on just Rs.20,000 monthly spends!"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "For 1st year fee waiver – Rs.20,000 retail spends done within 90 days of card set up",
+    "For 2nd year onwards fee waiver – Rs. 80,000 retail spends done in previous card anniversary year"
+    ]
+  }
+  ,
+  {
+    "bank": "au",
+    "tags": [
+      "cashback",
+      "lounge",
+    ],
+    "id": "20",
+    "key": "au-altura-card",
+    "name": "Axis Altura Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 199,
+    "stars": 3,
+    "features": [
+      "Save Big. Upto 7% Cashback as an introductory offer",
+      "Attractive Monthly Milestone Benefits",
+      "Complimentary Railway Lounge access",
+      "Complimentary Lost Card Liability cover",
+      "Rs.2,000+ Yearly Benefits on just Rs.10,000 monthly spends!"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "For 1st year fee waiver – Rs.20,000 retail spends done within 90 days of card set up",
+    "For 2nd year onwards fee waiver – Rs. 80,000 retail spends done in previous card anniversary year"
+    ]
+  }
+  ,
+  {
+    "bank": "au",
+    "tags": [
+      "reward_card",
+      "cashback",
+      "lounge"
+    ],
+    "id": "21",
+    "key": "au-lit-card",
+    "name": "Axis LIT Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 2,
+    "features": [
+      "Milestone Cashback",
+        "Fitness Memberships",
+        "Airport Lounge Access",
+        "Earn up to 10X reward points",
+        "Fuel Surcharge Waiver"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "For 1st year fee waiver – Rs.20,000 retail spends done within 90 days of card set up",
+    "For 2nd year onwards fee waiver – Rs. 80,000 retail spends done in previous card anniversary year"
+    ]
   }
 ]
-
