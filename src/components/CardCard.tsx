@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ApplyDialog from "./ApplyDialog";
 
 const CardCard = ({ details }: { details: CardType }) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -80,7 +81,11 @@ const MobileCard = ({ details }: { details: CardType }) => {
             </div>
           </div>
           <div className="max-w-[121px] flex flex-col gap-2">
-            <Button className="w-full h-[25px]">Apply Now</Button>
+            <ApplyDialog title={details.name} key={details.key}>
+              <Button className="w-full outline outline-1 h-[25px] outline-none">
+                Apply Now
+              </Button>
+            </ApplyDialog>
             <Button
               variant="secondary"
               className="w-full outline outline-1 h-[25px] bg-transparent"
@@ -188,7 +193,9 @@ const DesktopCard = ({ details }: { details: CardType }) => {
         </div>
       </div>
       <div className="w-[201px] py-12 gap-6 flex flex-col text-xl">
-        <Button className="w-full text-lg">Apply Now</Button>
+        <ApplyDialog title={details.name}>
+          <Button className="w-full text-lg">Apply Now</Button>
+        </ApplyDialog>
         <Button
           variant="secondary"
           className="w-full outline outline-1 bg-transparent text-lg"
