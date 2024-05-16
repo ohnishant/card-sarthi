@@ -1,23 +1,28 @@
 "use server";
 import postgres from "postgres";
+import { drizzle } from "drizzle-orm/postgres-js";
+import { sql } from "drizzle-orm";
+import { users } from "@/schema";
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
-const sql = postgres({
-  host: PGHOST,
-  database: PGDATABASE,
-  username: PGUSER,
-  password: PGPASSWORD,
-  port: 5432,
-  ssl: "require",
-  connection: {
-    options: `project=${ENDPOINT_ID}`,
-  },
-});
+const db = drizzle(
+  postgres({
+    host: PGHOST,
+    database: PGDATABASE,
+    username: PGUSER,
+    password: PGPASSWORD,
+    port: 5432,
+    ssl: "require",
+    connection: {
+      options: `project=${ENDPOINT_ID}`,
+    },
+  }),
+);
 
 export async function getPgVersion() {
-  const result = await sql`select version()`;
-  console.log(result);
+  const version = db.execute(sql`select version()`);
+  return version;
 }
 
 export async function addEntryToApplications({
@@ -26,22 +31,31 @@ export async function addEntryToApplications({
   name,
   email,
   pincode,
+  cardName,
 }: {
   pan: string;
   mobile: string;
   name: string;
   email: string;
   pincode: string;
+  cardName: string;
 }) {
   try {
-    const [dbResponse] = await sql`
-      INSERT INTO applications (pan, mobile, name, email, pincode)
-      VALUES (${pan}, ${mobile}, ${name}, ${email}, ${pincode})
-      RETURNING id
-    `;
-    const id = dbResponse && dbResponse.id ? dbResponse.id : null;
-    console.log("Added entry to applications", id);
-    return id;
+    const dbResponse = await db
+      .insert(users)
+      .values({
+        pan: pan,
+        mobile: mobile,
+        name: name,
+        email: email,
+        pincode: pincode,
+        card: cardName,
+      })
+      .returning({ insertedId: users.id });
+
+    const response = dbResponse[0];
+    console.log("Inserted id", response.insertedId);
+    return response.insertedId;
   } catch (error) {
     console.error("Error adding entry to applications", error);
   }
@@ -49,9 +63,11 @@ export async function addEntryToApplications({
 
 export async function getDatabaseTime(details: any) {
   try {
-    const [dbResponse] = await sql`SELECT NOW()`;
-    console.log("Database time", dbResponse);
-    return dbResponse;
+    console.log(details);
+    const dbResponse = await db.execute(sql`SELECT NOW()`);
+    const time = dbResponse.at(0)?.now;
+    console.log("Database time", time);
+    return time;
   } catch (error) {
     console.error("Error getting database time", error);
     return null;

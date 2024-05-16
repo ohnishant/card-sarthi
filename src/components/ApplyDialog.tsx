@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { z } from "zod";
@@ -23,6 +23,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+
+import { addEntryToApplications } from "@/actions/db";
+import { CardType } from "@/actions/getCardsByBankAndType";
 
 const formSchema = z.object({
   pan: z
@@ -49,7 +52,14 @@ const formSchema = z.object({
     ),
 });
 
-const ApplicationForm = () => {
+const ApplicationForm = ({
+  details,
+  onOpenChange: changeOpenState,
+}: {
+  details: CardType;
+  onOpenChange: (val: boolean) => void;
+}) => {
+  const [sumbitting, setSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,8 +70,15 @@ const ApplicationForm = () => {
       pincode: "",
     },
   });
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
+
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    setSubmitting(true);
+    const applicationDetails = { ...data, cardName: details.key };
+    const time = await addEntryToApplications(applicationDetails);
+    console.log(applicationDetails);
+    console.log(time);
+    changeOpenState(false);
+    setSubmitting(false);
   }
 
   return (
@@ -134,7 +151,7 @@ const ApplicationForm = () => {
           )}
         />
         <DialogFooter>
-          <Button type="submit" onClick={() => {}}>
+          <Button type="submit" disabled={sumbitting} onClick={() => {}}>
             Save changes
           </Button>
         </DialogFooter>
@@ -144,25 +161,27 @@ const ApplicationForm = () => {
 };
 
 const ApplyDialog = ({
-  title,
   children,
-  key,
+  details,
+  open,
+  setOpenState,
 }: {
-  title: string;
   children: React.ReactNode;
-  key: string;
+  details: CardType;
+  open: boolean;
+  setOpenState: (val: boolean) => void;
 }) => {
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpenState}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Apply for {title}</DialogTitle>
+          <DialogTitle>Apply for {details.name}.</DialogTitle>
           <DialogDescription>
             Just a few details to get started
           </DialogDescription>
         </DialogHeader>
-        <ApplicationForm />
+        <ApplicationForm details={details} onOpenChange={setOpenState} />
       </DialogContent>
     </Dialog>
   );

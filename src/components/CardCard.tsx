@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ApplyDialog from "./ApplyDialog";
+import { useState } from "react";
 
 const CardCard = ({ details }: { details: CardType }) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -23,6 +24,12 @@ const CardCard = ({ details }: { details: CardType }) => {
 };
 
 const MobileCard = ({ details }: { details: CardType }) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  function closeDialog(val: boolean) {
+    setDialogOpen(val);
+  }
+
   return (
     <div className="flex flex-col p-4 gap-4 justify-between rounded-md w-full min-h-56 bg-[#FCF4E3]">
       <div className="min-h-36 bg-green-30">
@@ -81,7 +88,11 @@ const MobileCard = ({ details }: { details: CardType }) => {
             </div>
           </div>
           <div className="max-w-[121px] flex flex-col gap-2">
-            <ApplyDialog title={details.name} key={details.key}>
+            <ApplyDialog
+              open={dialogOpen}
+              setOpenState={closeDialog}
+              details={details}
+            >
               <Button className="w-full outline outline-1 h-[25px] outline-none">
                 Apply Now
               </Button>
@@ -125,6 +136,11 @@ const MobileCard = ({ details }: { details: CardType }) => {
   );
 };
 const DesktopCard = ({ details }: { details: CardType }) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  function closeDialog(val: boolean) {
+    setDialogOpen(val);
+  }
   return (
     <div className="flex flex-col lg:flex-row p-4 justify-between rounded-md w-full min-h-96 bg-[#FCF4E3]">
       <div className="flex flex-col w-full gap-2">
@@ -199,7 +215,11 @@ const DesktopCard = ({ details }: { details: CardType }) => {
         </div>
       </div>
       <div className="w-[201px] py-12 gap-6 flex flex-col text-xl">
-        <ApplyDialog title={details.name} key={details.key}>
+        <ApplyDialog
+          open={dialogOpen}
+          setOpenState={closeDialog}
+          details={details}
+        >
           <Button className="w-full text-lg">Apply Now</Button>
         </ApplyDialog>
         <Button
