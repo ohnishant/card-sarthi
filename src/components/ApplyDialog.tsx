@@ -1,3 +1,4 @@
+"use client";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,137 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+const formSchema = z.object({
+  pan: z
+    .string()
+    .regex(/[A-Z]{5}[0-9]{4}[A-Z]{1}/, { message: "Invalid PAN number" })
+    .min(10)
+    .max(10),
+  mobile: z.string().min(10).max(10),
+  name: z.string().min(1),
+  email: z.string().email(),
+  pincode: z
+    .string()
+    .min(6, { message: "Invalid Pincode, too short" })
+    .max(6, { message: "Invalid Pincode, too long" })
+    .refine(
+      (value) => {
+        const numericPin = parseInt(value);
+        if (isNaN(numericPin)) {
+          return false;
+        }
+        return numericPin >= 100000 && numericPin <= 999999;
+      },
+      { message: "Invalid Pincode" },
+    ),
+});
+
+const ApplicationForm = () => {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      pan: "",
+      mobile: "",
+      name: "",
+      email: "",
+      pincode: "",
+    },
+  });
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    console.log(data);
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Full Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your Name" {...field} />
+              </FormControl>
+              <FormDescription></FormDescription>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="pan"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>PAN Number</FormLabel>
+              <FormControl>
+                <Input placeholder="ABCDE1234F" {...field} />
+              </FormControl>
+              <FormMessage />
+              <FormDescription></FormDescription>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email Address</FormLabel>
+              <FormControl>
+                <Input placeholder="Your Email Address" {...field} />
+              </FormControl>
+              <FormDescription></FormDescription>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="mobile"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Mobile Number</FormLabel>
+              <FormControl>
+                <Input placeholder="Mobile number per Aadhar" {...field} />
+              </FormControl>
+              <FormDescription></FormDescription>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="pincode"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>PinCode</FormLabel>
+              <FormControl>
+                <Input placeholder="xxxxxx" {...field} />
+              </FormControl>
+              <FormDescription></FormDescription>
+            </FormItem>
+          )}
+        />
+        <DialogFooter>
+          <Button type="submit" onClick={() => {}}>
+            Save changes
+          </Button>
+        </DialogFooter>
+      </form>
+    </Form>
+  );
+};
 
 const ApplyDialog = ({
   title,
@@ -21,24 +152,6 @@ const ApplyDialog = ({
   children: React.ReactNode;
   key: string;
 }) => {
-  // TODO: React Hook Form with zod validation here
-  const [pan, setPan] = useState("");
-  const [phone, setPhone] = useState("");
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [pincode, setPincode] = useState("");
-
-  function handleSubmit() {
-    const data = {
-      pan,
-      phone,
-      fullName,
-      email,
-      pincode,
-    };
-    console.log(`Form submitted with data: ${JSON.stringify(data)} for ${key}`);
-  }
-
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -49,74 +162,7 @@ const ApplyDialog = ({
             Just a few details to get started
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              PAN
-            </Label>
-            <Input
-              id="pan"
-              value={pan}
-              onChange={(e) => setPan(e.target.value)}
-              placeholder="ABCDE1234F"
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="phone" className="text-right">
-              Mobile as per Aadhar
-            </Label>
-            <Input
-              id="phone"
-              value={phone}
-              placeholder="9876543210"
-              onChange={(e) => setPhone(e.target.value)}
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Full Name
-            </Label>
-            <Input
-              id="name"
-              value={fullName}
-              placeholder="John Doe"
-              onChange={(e) => setFullName(e.target.value)}
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="email" className="text-right">
-              Email
-            </Label>
-            <Input
-              id="email"
-              value={email}
-              placeholder="johndoe@email.com"
-              onChange={(e) => setEmail(e.target.value)}
-              className="col-span-3"
-              type="email"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="pincode" className="text-right">
-              Pincode
-            </Label>
-            <Input
-              id="pincode"
-              value={pincode}
-              placeholder="xxxxxx"
-              onChange={(e) => setPincode(e.target.value)}
-              className="col-span-3"
-            />
-          </div>
-        </div>
-        <DialogFooter>
-          <Button type="submit" onClick={handleSubmit}>
-            Save changes
-          </Button>
-        </DialogFooter>
+        <ApplicationForm />
       </DialogContent>
     </Dialog>
   );
