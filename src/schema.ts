@@ -13,4 +13,5 @@ export const users = pgTable("applications", {
   createdAt: timestamp("created_at", { withTimezone: true })
     .notNull()
     .defaultNow(),
+  card: text("card").notNull(),
 });
