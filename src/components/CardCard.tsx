@@ -196,6 +196,20 @@ const DesktopCard = ({ details }: { details: CardType }) => {
               <> </>
             )}
           </div>
+          <div>
+            {details.benefits.length ? (
+              <>
+                <strong className="font-semibold text-lg">Benefits</strong>
+                <ul className="list-disc list-outside pl-3">
+                  {details.benefits.map((offer, id) => (
+                    <li key={id}>{offer}</li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <> </>
+            )}
+          </div>
         </div>
       </div>
       <div className="w-[201px] py-12 gap-6 flex flex-col text-xl">

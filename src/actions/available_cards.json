@@ -404,7 +404,7 @@
   {
     "bank": "idfc",
     "tags": [
-      "no-annual-fee",
+      "no_annual_fee",
       "reward_card",
       "dine"
     ],
@@ -433,7 +433,7 @@
     "tags": [
       "shopping",
       "reward_card",
-      "no-annual-fee",
+      "no_annual_fee",
       "lounge",
       "travel",
       "dine"
@@ -467,7 +467,7 @@
     "tags": [
       "shopping",
       "reward_card",
-      "no-annual-fee",
+      "no_annual_fee",
       "lounge",
       "dine"
     ],
@@ -498,7 +498,7 @@
     "tags": [
       "shopping",
       "reward_card",
-      "no-annual-fee",
+      "no_annual_fee",
       "lounge",
       "travel",
       "dine"
