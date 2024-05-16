@@ -120,6 +120,18 @@ const MobileCard = ({ details }: { details: CardType }) => {
             </ul>
           </AccordionContent>
         </AccordionItem>
+        <AccordionItem value="benefits">
+          <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
+          Benefits
+          </AccordionTrigger>
+          <AccordionContent className="bg-[#FFE0A0] rounded-b">
+            <ul className="list-disc list-outside p-10">
+              {details.benefits.map((offer, id) => (
+                <li key={id}>{offer}</li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
     </div>
   );
