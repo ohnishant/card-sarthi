@@ -1,11 +1,12 @@
 # Adding cards to the Data Store
 
-Card sarthi in it's current state stores all the details of the cards in a singular json array
-located in `./src/actions/available_cards.json` which get sent to the client side using a server action stored in
-the same directory called `getCardsByBankAndType`.
+Card sarthi in it's current state stores all the details of the cards in a singular
+json array located in `./src/actions/available_cards.json` which get sent to
+the client side using a server action stored in the same directory called `getCardsByBankAndType`.
 
-To add/remove cards to this index, just update the json and push to production while ensuring that each card comtains
-the minimum fields according to the below interface, stored in `getCardsByBankAndType.ts`.
+To add/remove cards to this index, just update the json and push to production
+while ensuring that each card contains the minimum fields according to the below
+interface, stored in `getCardsByBankAndType.ts`.
 
 ```ts
 export interface CardType {
@@ -18,14 +19,16 @@ export interface CardType {
   credit_score: number;
   joining_fee: number;
   annual_fee: number;
-  interest_rate: number;
-  withdrawal_fee: number;
+  interest_rate?: number;
+  withdrawal_fee?: number;
   features: string[];
   welcome_offer: string[];
   benefits: string[];
 }
 ```
+
 Example:
+
 ```ts
   {
     "bank": "axis",
@@ -51,11 +54,10 @@ Example:
 
 ## Card Images
 
-Images for the cards are currently just stored in the public directory, in `*.jpg` format.
-The file names need to correspond with the key mentioned in the json file.
+Images for the cards are currently just stored in the public directory, in `*.jpg`
+format. The file names need to correspond with the key mentioned in the json file.
 
 The image for the above example would be named `axis-aura-cc.jgp` for the above example
 
-
-> PS: In number of entries expand and we need Image URL's instead, it would ensue breaking the
-> above interface and introducing a url field.
+> PS: In number of entries expand and we need Image URL's instead, it would ensue
+> breaking the above interface and introducing a url field.
