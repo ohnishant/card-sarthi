@@ -173,6 +173,7 @@
       "shopping",
       "reward_card",
       "lounge",
+      "travel",
       "dine"
     ],
     "id": "7",
@@ -208,7 +209,7 @@
     ],
     "id": "8",
     "key": "au-vetta-card",
-    "name": "Axis Vetta Credit Card",
+    "name": "AU Vetta Credit Card",
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 2999,
@@ -233,11 +234,12 @@
     "tags": [
       "cashback",
       "reward_card",
+      "travel",
       "lounge"
     ],
     "id": "9",
-    "key": "au-altura-plus-card",
-    "name": "Axis Altura Plus Credit Card",
+    "key": "au-altura-card-plus",
+    "name": "AU Altura Plus Credit Card",
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 499,
@@ -265,7 +267,7 @@
     ],
     "id": "10",
     "key": "au-altura-card",
-    "name": "Axis Altura Credit Card",
+    "name": "AU Altura Credit Card",
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 199,
@@ -294,7 +296,7 @@
     ],
     "id": "11",
     "key": "au-lit-card",
-    "name": "Axis LIT Credit Card",
+    "name": "AU LIT Credit Card",
     "credit_score": 750,
     "joining_fee": 0,
     "annual_fee": 0,
@@ -312,58 +314,508 @@
       "For 1st year fee waiver – Rs.20,000 retail spends done within 90 days of card set up",
     "For 2nd year onwards fee waiver – Rs. 80,000 retail spends done in previous card anniversary year"
     ]
-  },
+  }
+  ,
+  {
+    "bank": "hdfc",
+    "tags": [
+      "shopping",
+      "reward_card"
+    ],
+    "id": "12",
+    "key": "hdfc-rupay-card",
+    "name": "HDFC Rupay Cards",
+    "credit_score": 750,
+    "joining_fee": 99,
+    "annual_fee": 99,
+    "stars": 4,
+    "features": [
+      "3% Cashpoints on Groceries, SuperMarket & Dining spends & PayZapp transactions. (Maximum of 500 Points can be earned in a calendar month)",
+      "2% Cashpoints on Utility spends (Maximum of 500 Points can be earned in a calendar month)",
+      "1% Cashpoints on other spends (Excluding Rent, Wallet loads, EMI, Fuel, Insurance Payments & Government categories) (Maximum of 500 Points can be earned in a calendar month)"
+    ],
+    "welcome_offer": [],
+    "benefits": [
+      "Get renewal membership fee waived off by spending ₹25,000 and above in an annual year"
+    ]
+  }
+  ,
   {
     "bank": "hdfc",
     "tags": [
       "shopping",
       "reward_card",
-      "lounge"
+      "dine"
     ],
-    "id": "12",
-    "key": "hdfc-credit-card",
-    "name": "HDFC Credit Cards",
-    "credit_score": 700,
-    "joining_fee": 749,
-    "annual_fee": 749,
+    "id": "13",
+    "key": "hdfc-swiggy-card",
+    "name": "Swiggy HDFC Credit Cards",
+    "credit_score": 750,
+    "joining_fee": 500,
+    "annual_fee": 500,
     "stars": 4,
-    "interest_rate": 3.6,
-    "withdrawal_fee": 2.5,
     "features": [
-      "Leverage revolving credit facilities at nominal interest rates",
-      "Get liability waivers on fraudulent transactions and Credit Card loss"
+      "10% Cashback on Swiggy application (Food ordering, Instamart, Dineout & Genie).",
+      "5% Cashback on online spends across online MCCs.",
+      "1% Cashback on other categories."
     ],
-    "welcome_offer": [],
+    "welcome_offer": [
+      "Get complimentary Swiggy one Membership for 3 months as welcome benefit",
+      "Swiggy One Membership is a premium subscription program for Swiggy users. A single membership that offers unlimited benefits across restaurants, Instamart and Genie orders on Swiggy including free delivery and exclusive discounts from select restaurants. To get this membership, activate your Swiggy HDFC Bank Credit Card."
+    ],
     "benefits": [
-      "Complimentary access to airport lounges",
-      "Smart EMI : Convert credit card spends of ₹2,500 or more into Smart EMIs"
+      "Spend ₹2,00,000 or more in a year, before your Credit Card renewal date and get your renewal fee waived off", 
+      "Exclusions for Spends of Rs. 2,00,000 and above for eligibility of renewal year fee waiver are as follows:", 
+      "Cash on Call",
+      "Balance Transfer", 
+      "Cash Withdrawal",
+      "Get renewal membership fee waived off by spending ₹25,000 and above in an annual year"
     ]
-  },
+  }
+  ,
+  {
+    "bank": "hdfc",
+    "tags": [
+      "travel",
+      "reward_card",
+      "dine"
+    ],
+    "id": "14",
+    "key": "hdfc-money-credit-card",
+    "name": "HDFC MoneyBack Credit Card",
+    "credit_score": 750,
+    "joining_fee": 500,
+    "annual_fee": 500,
+    "stars": 4,
+    "features": [
+      "Earn 2 Reward Points on every Rs 150 spent (Excluding fuel transaction, wallets loads/prepaid card loads & voucher purchases)",
+      "Earn 2X Reward Points i.e. 4 Reward Points on every Rs. 150 spent online*",
+      "Every quarter, get a gift voucher worth Rs. 500 on spends of Rs 50,000. Earn up to Rs. 2,000 worth gift vouchers in a year."
+    ],
+    "welcome_offer": [
+      "500 Cash Points (applicable only on payment of membership fee)"
+    ],
+    "benefits": [
+      "Spend ₹50,000 and above in each calendar quarter and get ₹500 worth gift vouchers",
+      "Spend ₹50,000 and above in the first year and get renewal membership fee waived off"
+    ]
+  }
+  ,
+  {
+    "bank": "idfc",
+    "tags": [
+      "no-annual-fee",
+      "reward_card",
+      "dine"
+    ],
+    "id": "15",
+    "key": "idfc-millennia-card",
+    "name": "FIRST Millennia Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 4,
+    "features": [
+      "10X Reward Points on incremental spends above ₹20,000 per month and spends done on your birthday",
+      "3X  Reward Points on applicable online & offline purchases for spends up to ₹20,000 per month",
+      "1X Reward Points on Insurance premium payments and Utility bill payments"
+    ],
+    "welcome_offer": [
+      "Welcome voucher worth ₹ 500 on spending ₹ 5000 or more within 30 days of card generation.",
+      "5% cashback (up to ₹1000) on the transaction value of first EMI done within 30 days of card generation"
+    ],
+    "benefits": [
+    ]
+  }
+  ,
   {
     "bank": "idfc",
     "tags": [
       "shopping",
-      "reward_card"
+      "reward_card",
+      "no-annual-fee",
+      "lounge",
+      "travel",
+      "dine"
     ],
-    "id": "20",
-    "key": "idfc-club-vistara",
-    "name": "IDFC Club Vistara Card",
-    "credit_score": 700,
-    "joining_fee": 4999,
-    "annual_fee": 4999,
-    "stars": 4,
-    "interest_rate": 3.6,
-    "withdrawal_fee": 2.5,
+    "id": "16",
+    "key": "idfc-classic-card",
+    "name": "FIRST Classic Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 5,
     "features": [
-      "Trip cancellation cover up to ₹10,000 on flight and hotel booking",
-      "12 complimentary golf lessons + 4 complimentary rounds of golf /year"
+      "10X Reward Points on incremental spends above ₹20,000 per month and spends done on your birthday",
+      "3X  Reward Points on applicable online & offline purchases for spends up to ₹20,000 per month",
+      "1X Reward Points on Insurance premium payments and Utility bill payments",
+      "25% discount on movie tickets up to ₹100 on Paytm mobile app (valid once per month)",
+      "4 complimentary Railway lounge visits per quarter",
+      "Fuel surcharge waiver of 1%, at all fuel stations across India, up to ₹200/month",
+      "*Applicable only on transaction values between ₹200 & ₹5000"
     ],
     "welcome_offer": [
-      "3 months complimentary EazyDiner Prime membership and BQ Prime subscription"
+      "Welcome voucher worth ₹ 500 on spending ₹ 5000 or more within 30 days of card generation.",
+      "5% cashback (up to ₹1000) on the transaction value of first EMI done within 30 days of card generation"
     ],
     "benefits": [
-      "Upto 6x premium economy flight tickets + 1 voucher upgrade on annual milestone",
-      "Complimentary Club Vistara Silver Membership"
+    ]
+  }
+  ,
+  {
+    "bank": "idfc",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "no-annual-fee",
+      "lounge",
+      "dine"
+    ],
+    "id": "17",
+    "key": "idfc-select-card",
+    "name": "FIRST Select Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 5,
+    "features": [
+      "3X Reward Points on Spends till ₹20,000 in a statement cycle",
+      "10X Reward Points on crossing spends of ₹20,000 in a statement cycle & on your birthday",
+      "'Buy One, Get One' offer on movie tickets up to ₹125 on Paytm mobile app (valid twice per month)",
+      "2 complimentary Domestic airport lounge visits per quarter, on spending ₹20,000 every month.",
+      "1% Fuel Surcharge Waiver up to ₹300 p.m. at all fuel stations across India, on transaction values between ₹200 & ₹5000"
+    ],
+    "welcome_offer": [
+      "Welcome voucher worth ₹ 500 on spending ₹ 5000 or more within 30 days of card generation.",
+      "5% cashback (up to ₹1000) on the transaction value of first EMI done within 30 days of card generation"
+    ],
+    "benefits": [
+    ]
+  }
+  ,
+  {
+    "bank": "idfc",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "no-annual-fee",
+      "lounge",
+      "travel",
+      "dine"
+    ],
+    "id": "18",
+    "key": "idfc-wealth-card",
+    "name": "FIRST Wealth Credit Card",
+    "credit_score": 750,
+    "joining_fee": 0,
+    "annual_fee": 0,
+    "stars": 5,
+    "features": [
+      "3X Reward Points on Spends till ₹20,000 in a statement cycle",
+      "10X Reward Points on crossing spends of ₹20,000 in a statement cycle & on your birthday",
+      "'Buy One, Get One' offer on movie tickets up to ₹250 on Paytm mobile app (valid twice per month)",
+      "300+ Brand Offers, All year long! | Up to 20% discount at 1500+ restaurants "
+    ],
+    "welcome_offer": [
+      "Welcome voucher worth ₹ 500 on spending ₹ 5000 or more within 30 days of card generation.",
+      "5% cashback (up to ₹1000) on the transaction value of first EMI done within 30 days of card generation"
+    ],
+    "benefits": [
+    ]
+  }
+  ,
+  {
+    "bank": "yes",
+    "tags": [
+      "reward_card",
+      "lounge",
+      "travel",
+      "dine"
+    ],
+    "id": "19",
+    "key": "yes-elite-card",
+    "name": "YES Elite Credit Card",
+    "credit_score": 750,
+    "joining_fee": 999,
+    "annual_fee": 999,
+    "stars": 5,
+    "features": [
+      "Avail 25% discount on movie tickets booked on BookMyShow",
+      "Enjoy waiver of 4 Green Fee at select golf courses in India",
+      "1% Fuel surcharge waiver at fuel stations across India for transaction between INR 400 to INR 5,000",
+      "Access to airport lounges internationally for Mastercard and Visa cards",
+      "Celebrate your love for food- Get a minimum 15% discount on dining at select restaurants on your YES Bank Credit Card"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "Renewal Membership Fee of INR 999, waived on total retail spends of INR 2,00,000 in a year and get waiver on subsequent renewal fee"
+    ]
+  }
+  ,
+  {
+    "bank": "yes",
+    "tags": [
+      "reward_card",
+      "lounge",
+      "travel",
+      "dine"
+    ],
+    "id": "20",
+    "key": "yes-select-card",
+    "name": "YES Select Credit Card",
+    "credit_score": 750,
+    "joining_fee": 499,
+    "annual_fee": 499,
+    "stars": 4,
+    "features": [
+      "Avail 25% discount on movie tickets booked on BookMyShow",
+      "Enjoy waiver of 4 Green Fee at select golf courses in India",
+      "1% Fuel surcharge waiver at fuel stations across India for transaction between INR 400 to INR 5,000",
+      "Access to airport lounges internationally for Mastercard and Visa cards",
+      "Celebrate your love for food- Get a minimum 15% discount on dining at select restaurants on your YES Bank Credit Card"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "Renewal Membership Fee of INR 499, waived on total retail spends of INR 1,00,000 in a year and get waiver on subsequent renewal fee"
+    ]
+  }
+  ,
+  {
+    "bank": "yes",
+    "tags": [
+      "reward_card",
+      "shopping",
+      "travel",
+      "dine"
+    ],
+    "id": "21",
+    "key": "yes-ace-card",
+    "name": "YES Ace Credit Card",
+    "credit_score": 750,
+    "joining_fee": 399,
+    "annual_fee": 399,
+    "stars": 3,
+    "features": [
+      "Avail 25% discount on movie tickets booked on BookMyShow",
+      "Enjoy waiver of 4 Green Fee at select golf courses in India",
+      "1% Fuel surcharge waiver at fuel stations across India for transaction between INR 400 to INR 5,000",
+      "Access to airport lounges internationally for Mastercard and Visa cards",
+      "Celebrate your love for food- Get a minimum 15% discount on dining at select restaurants on your YES Bank Credit Card"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "First Year Membership Fee of INR 399, reversed on spends of INR 5,000 within 30 days of card set up",
+      "Renewal Membership Fee of INR 399 , waived on total retail spends of INR 50,000 in a year and get waiver on subsequent renewal fee"
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "reward_card",
+      "shopping",
+      "travel",
+      "dine"
+    ],
+    "id": "22",
+    "key": "sbi-prime-card",
+    "name": "Sbi Prime Credit Card",
+    "credit_score": 750,
+    "joining_fee": 2999,
+    "annual_fee": 2999,
+    "stars": 5,
+    "features": [
+      "Welcome e-Gift Voucher worth Rs. 3,000 on joining",
+      "Spend linked Gift Vouchers worth Rs. 11,000",
+      "10 Reward Points per Rs. 100 spent on Dining, Groceries, Departmental stores and Movies",
+      "Complimentary International and Domestic Airport Lounge access"
+    ],
+    "welcome_offer": [
+      "Welcome e-gift Voucher worth Rs. 3,000 from any of the following brands: Bata/Hush Puppies, Pantaloons, Aditya Birla Fashion, Shoppers Stop and Yatra.com"
+    ],
+    "benefits": [
+      "Get Pizza Hut e-Voucher worth Rs. 1,000 on achieving spends of Rs. 50,000 in a calendar quarter",
+      "Waiver of Renewal Fee on annual spends of Rs. 3 Lakhs",
+      "E-Gift Voucher worth Rs. 7,000 from Yatra.com/Pantaloons on achieving annual spends of Rs. 5 Lakhs"
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "travel",
+      "cashback"
+    ],
+    "id": "23",
+    "key": "sbi-cashback-card",
+    "name": "Sbi Cashback Credit Card",
+    "credit_score": 750,
+    "joining_fee": 999,
+    "annual_fee": 999,
+    "stars": 4,
+    "features": [
+      "5% Cashback on online* spends without any merchant restriction",
+      "1% Cashback on offline* spends",
+      "1% Fuel Surcharge Waiver across all petrol pumps in India*"
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "Renewal Fee (per annum): Rs. 999 from second year onwards. Renewal Fee reversed if annual spends for last year >= Rs. 2,00,000."
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "dine",
+      "lounge",
+      "travel"
+    ],
+    "id": "24",
+    "key": "sbi-miles-elite-card",
+    "name": "SBI Card Miles Elite",
+    "credit_score": 750,
+    "joining_fee": 4999,
+    "annual_fee": 4999,
+    "stars": 5,
+    "features": [
+      "Earn 6 Travel Credits for every ₹ 200 that you spend on travel",
+      "Earn 2 Travel Credits for every ₹ 200 on all other spends",
+      "Get 6 complimentary International Airport Lounge visits every year, outside India (max. 2 visits per quarter)",
+      "Earn 20,000 Bonus Travel Credits on annual spends of ₹12 Lak",
+      "Enjoy the privilege of low Foreign Currency Mark-up Charge of 1.99% on International usage",
+      "1% Fuel Surcharge Waiver across all petrol pumps. (Govt. Service Tax extra as applicable)"
+    ],
+    "welcome_offer": [
+      "Get 5000 Travel Credits as Welcome Gift"
+    ],
+    "benefits": [
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "travel",
+      "dine"
+    ],
+    "id": "25",
+    "key": "sbi-simplyclick-card",
+    "name": "Sbi SimplyClick Credit Card",
+    "credit_score": 750,
+    "joining_fee": 499,
+    "annual_fee": 499,
+    "stars": 3,
+    "features": [
+      "Earn 10X Reward Points on online spends with exclusive partners: Apollo 24x7/BookMyShow/ Cleartrip/ Dominos/ Myntra/ Netmeds/ Swiggy/ Yatra",
+      "Earn 5X Reward Points on all other online spends",
+      "e-Vouchers worth  Rs. 2,000 each on reaching annual online spends of 1 Lakh and 2 Lakh respectively",
+      "1% fuel surcharge waiver for each transaction between Rs 500 & Rs 3000 (exclusive of GST, wherever applicable, & all other charges)"
+    ],
+    "welcome_offer": [
+      "Get Amazon.in gift card worth Rs.500* on payment of Annual Fee of Rs. 499 +taxes."
+    ],
+    "benefits": [
+      "Spend Rs 1,00,000 and get annual fee of Rs 499 reversed for your SimplyCLICK SBI card in the subsequent year."
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "travel",
+      "dine"
+    ],
+    "id": "26",
+    "key": "sbi-simplysave-upi-card",
+    "name": "Sbi SimplySave UPI Credit Card",
+    "credit_score": 750,
+    "joining_fee": 499,
+    "annual_fee": 499,
+    "stars": 3,
+    "features": [
+      "Spend Rs. 2,000 or more in first 60 days and get 2,000 bonus Reward Points",
+      "Enjoy 10 Reward Points per Rs 150 spent on Dining, Movies, Departmental Stores and Grocery Spends."
+    ],
+    "welcome_offer": [
+    ],
+    "benefits": [
+      "To avail fee reversal, you need to have spent Rs. 1,00,000 or more on your SimplySAVE UPI SBI Card in the previous year"
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "travel",
+      "dine"
+    ],
+    "id": "27",
+    "key": "sbi-elite-card",
+    "name": "Sbi Elite Credit Card",
+    "credit_score": 750,
+    "joining_fee": 4999,
+    "annual_fee": 4999,
+    "stars": 5,
+    "features": [
+      "Free Movie Tickets worth Rs. 6,000 every year",
+      "ransaction valid for at least 2 tickets per booking per month. Maximum discount is Rs. 250/ticket for 2 tickets only. Convenience Fee would be chargeable",
+      "Get 5X Reward Points on Dining, Departmental stores and Grocery Spends",
+      "Earn 2 Reward Points per Rs. 100 on all other spends, except fue",
+      "6 complimentary Airport Lounge visits per calendar year, outside India",
+      "Enjoy complimentary Club Vistara Silver membership",
+      "Enjoy complimentary Trident Privilege Red Tier membership",
+      "Dedicated assistance on Flower Delivery, Gift Delivery, Online Doctor Consultation."
+    ],
+    "welcome_offer": [
+      "Welcome e- Gift Voucher worth Rs. 5,000",
+      "Choose from an array of travel and lifestyle brands : Yatra, Hush Puppies/Bata, Pantaloons, Aditya Birla Fashion and Shoppers Stop"
+    ],
+    "benefits": [
+    ]
+  }
+  ,
+  {
+    "bank": "sbi",
+    "tags": [
+      "shopping",
+      "reward_card",
+      "travel",
+      "dine"
+    ],
+    "id": "28",
+    "key": "sbi-card-pulse",
+    "name": "Sbi Pulse Credit Card",
+    "credit_score": 750,
+    "joining_fee": 1499,
+    "annual_fee": 1499,
+    "stars": 4,
+    "features": [
+      "Enjoy 1 year complimentary FITPASS PRO Membership, to be received every year, on card renewal",
+      "Enjoy 1 year complimentary Netmeds First Membership, to be received every year, on card renewal",
+      "Enjoy 10 Reward Points per Rs. 100 spent on Chemist, Pharmacy, Dining and Movies spends",
+      "Earn 2 Reward Points per Rs.100 spent on all your other spends",
+      "Complimentary 8 Domestic Lounge visits (Restricted to 2 per quarter)"
+    ],
+    "welcome_offer": [
+      "Get a Noise ColorFit Pulse 2 Max Smart Watch worth Rs. 5,999 on payment of joining fee"
+    ],
+    "benefits": [
+      "Waiver of Renewal Fee on annual spends of Rs.2 Lakhs",
+      "Get Rs.1500 E-Voucher on achieving annual retails spends of Rs. 4 Lakhs"
     ]
   }
 ]
