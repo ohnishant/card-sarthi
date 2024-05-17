@@ -3,8 +3,15 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { ApplicationDataType } from "@/schema";
 import { Button } from "@/components/ui/button";
-import { Check, Trash2 } from "lucide-react";
-import { markApplicationAsRead } from "@/actions/db";
+import { Check, Trash2, X } from "lucide-react";
+import { toggleReadStatus } from "@/actions/db";
+import { toast } from "sonner";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -65,12 +72,40 @@ export const columns: ColumnDef<ApplicationDataType>[] = [
           <Button
             variant="ghost"
             className="px-1"
-            onClick={() => {
-              console.log(`Mark as read pressed for ${application.id}`);
-              markApplicationAsRead(application.id);
+            onClick={async () => {
+              console.log(`Toggled Read status for ${application.id}`);
+              const updated = await toggleReadStatus(application.id);
+              toast("Application marked as read", {
+                description: `Application with ID ${updated} was updated successfully.`,
+              });
             }}
           >
-            <Check className="text-green-500" />
+            {application.checked ? (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <X className="text-orange-500" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Mark As Unread</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ) : (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Check className="text-green-500" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Mark As Read</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+            {
+              // <Check className="text-green-500" />
+            }
           </Button>
         </div>
       );

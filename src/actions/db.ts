@@ -1,7 +1,7 @@
 "use server";
 import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
-import { sql, eq } from "drizzle-orm";
+import { sql, eq, not } from "drizzle-orm";
 import { applications } from "@/schema";
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
@@ -47,6 +47,20 @@ export async function getAllReadApplications() {
     return dbResponse;
   } catch (error) {
     console.error("Error getting all read applications", error);
+    return null;
+  }
+}
+
+export async function toggleReadStatus(id: string) {
+  try {
+    const dbResponse = await db
+      .update(applications)
+      .set({ checked: not(applications.checked) })
+      .where(eq(applications.id, id))
+      .returning({ updatedId: applications.id });
+    return dbResponse[0].updatedId;
+  } catch (error) {
+    console.error("Error marking application as read", error);
     return null;
   }
 }
