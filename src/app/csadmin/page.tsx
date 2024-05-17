@@ -21,6 +21,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import UnreadApplicationsTable from "./UnreadApplicationsTable";
 import { Suspense } from "react";
 import ReadApplicationsTable from "./ReadApplicationsTable";
+import { Toaster } from "@/components/ui/toaster";
 
 export default async function Dashboard() {
   return (
@@ -85,6 +86,7 @@ export default async function Dashboard() {
               <CardFooter></CardFooter>
             </Card>
           </Tabs>
+          <Toaster />
         </main>
       </div>
     </div>

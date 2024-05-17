@@ -4,7 +4,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ApplicationDataType } from "@/schema";
 import { Button } from "@/components/ui/button";
 import { Check, Trash2, X } from "lucide-react";
-import { toggleReadStatus } from "@/actions/db";
+import { toggleReadStatus, deleteApplication } from "@/actions/db";
 import { toast } from "sonner";
 import {
   Tooltip,
@@ -63,8 +63,9 @@ export const columns: ColumnDef<ApplicationDataType>[] = [
           <Button
             variant="ghost"
             className="px-1"
-            onClick={() => {
-              alert(`Delete pressed for  ${application.id}`);
+            onClick={async () => {
+              const deletedId = await deleteApplication(application.id);
+              alert(`Application id: ${deletedId} deleted`);
             }}
           >
             <Trash2 className="text-red-500" />
@@ -75,9 +76,7 @@ export const columns: ColumnDef<ApplicationDataType>[] = [
             onClick={async () => {
               console.log(`Toggled Read status for ${application.id}`);
               const updated = await toggleReadStatus(application.id);
-              toast("Application marked as read", {
-                description: `Application with ID ${updated} was updated successfully.`,
-              });
+              toast("Application marked as read");
             }}
           >
             {application.checked ? (
