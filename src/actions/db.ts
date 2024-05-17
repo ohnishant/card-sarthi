@@ -1,8 +1,8 @@
 "use server";
 import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
-import { sql } from "drizzle-orm";
-import { users } from "@/schema";
+import { sql, eq } from "drizzle-orm";
+import { applications } from "@/schema";
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
@@ -25,6 +25,72 @@ export async function getPgVersion() {
   return version;
 }
 
+export async function getAllUnreadApplications() {
+  try {
+    const dbResponse = await db
+      .select()
+      .from(applications)
+      .where(eq(applications.checked, false));
+    return dbResponse;
+  } catch (error) {
+    console.error("Error getting all unread applications", error);
+    return null;
+  }
+}
+
+export async function getAllReadApplications() {
+  try {
+    const dbResponse = await db
+      .select()
+      .from(applications)
+      .where(eq(applications.checked, true));
+    return dbResponse;
+  } catch (error) {
+    console.error("Error getting all read applications", error);
+    return null;
+  }
+}
+
+export async function markApplicationAsRead(id: string) {
+  try {
+    const dbResponse = await db
+      .update(applications)
+      .set({ checked: true })
+      .where(eq(applications.id, id))
+      .returning({ updatedId: applications.id });
+    return dbResponse[0].updatedId;
+  } catch (error) {
+    console.error("Error marking application as read", error);
+    return null;
+  }
+}
+
+export async function deleteApplication(id: string) {
+  try {
+    const dbResponse = await db
+      .delete(applications)
+      .where(eq(applications.id, id))
+      .returning({ deletedId: applications.id });
+    return dbResponse[0].deletedId;
+  } catch (error) {
+    console.error("Error deleting application", error);
+    return null;
+  }
+}
+
+export async function getApplicationByEmail(email: string) {
+  try {
+    const dbResponse = await db
+      .select()
+      .from(applications)
+      .where(eq(applications.email, email));
+    return dbResponse;
+  } catch (error) {
+    console.error("Error getting application by email", error);
+    return null;
+  }
+}
+
 export async function addEntryToApplications({
   pan,
   mobile,
@@ -42,7 +108,7 @@ export async function addEntryToApplications({
 }) {
   try {
     const dbResponse = await db
-      .insert(users)
+      .insert(applications)
       .values({
         pan: pan,
         mobile: mobile,
@@ -51,7 +117,7 @@ export async function addEntryToApplications({
         pincode: pincode,
         card: cardName,
       })
-      .returning({ insertedId: users.id });
+      .returning({ insertedId: applications.id });
 
     const response = dbResponse[0];
     console.log("Inserted id", response.insertedId);
