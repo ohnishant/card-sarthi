@@ -58,55 +58,55 @@ const CategoryOptions = () => {
 
   return (
     <div className="bg-[#FEF7FF]">
-      <div className="container flex flex-row items-center py-10 md:justify-between overflow-scroll no-scrollbar">
+      <div className="container flex flex-row items-center md:py-10 md:justify-between overflow-scroll no-scrollbar">
         <TabOption
           text="Reward"
           currentTab={selectedTab}
           activeOn="reward_card"
           onClick={() => handleTabChange("reward_card")}
-          icon={<Gift />}
+          icon={<Gift className="size-4 sm:size-6" />}
         />
         <TabOption
           text="No annual fee"
           currentTab={selectedTab}
           activeOn="no_annual_fee"
           onClick={() => handleTabChange("no_annual_fee")}
-          icon={<ReceiptText />}
+          icon={<ReceiptText className="size-4 sm:size-6" />}
         />
         <TabOption
           text="Lounge"
           currentTab={selectedTab}
           activeOn="lounge"
           onClick={() => handleTabChange("lounge")}
-          icon={<Armchair />}
+          icon={<Armchair className="size-4 sm:size-6" />}
         />
         <TabOption
           text="Cashback"
           currentTab={selectedTab}
           activeOn="cashback"
           onClick={() => handleTabChange("cashback")}
-          icon={<Banknote />}
+          icon={<Banknote className="size-4 sm:size-6" />}
         />
         <TabOption
           text="Shopping"
           currentTab={selectedTab}
           activeOn="shopping"
           onClick={() => handleTabChange("shopping")}
-          icon={<ShoppingCart />}
+          icon={<ShoppingCart className="size-4 sm:size-6" />}
         />
         <TabOption
           text="Travel"
           currentTab={selectedTab}
           activeOn="travel"
           onClick={() => handleTabChange("travel")}
-          icon={<Luggage />}
+          icon={<Luggage className="size-4 sm:size-6" />}
         />
         <TabOption
           text="Dine in"
           currentTab={selectedTab}
           activeOn="dine"
           onClick={() => handleTabChange("dine")}
-          icon={<UtensilsCrossed />}
+          icon={<UtensilsCrossed className="size-4 sm:size-6" />}
         />
       </div>
     </div>
@@ -129,7 +129,7 @@ const TabOption = ({
   return (
     <Button
       onClick={onClick}
-      className="h-auto w-fit bg-transparent hover:bg-transparent text-black"
+      className="h-auto px-1 md:px-4 w-fit bg-transparent hover:bg-transparent text-black"
     >
       <CardOption
         text={text}

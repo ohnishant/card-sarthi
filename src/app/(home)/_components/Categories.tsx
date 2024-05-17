@@ -17,7 +17,7 @@ const Categories = () => {
       </strong>
       <div className="md:flex md:flex-row grid grid-cols-3 container md:justify-around flex-wrap md:gap-16 w-full justify-items-center">
         {categories.map((category) => (
-          <Link key={category.name} href={category.href}>
+          <Link key={category.name} className="my-2" href={category.href}>
             <CardOption
               key={category.id}
               text={category.name}
