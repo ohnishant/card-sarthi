@@ -76,7 +76,7 @@ export default async function Dashboard() {
                     <UnreadApplicationsTable />
                   </Suspense>
                 </TabsContent>
-                <TabsContent value="unread">
+                <TabsContent value="read">
                   <Suspense fallback={<div>Loading...</div>}>
                     <ReadApplicationsTable />
                   </Suspense>
