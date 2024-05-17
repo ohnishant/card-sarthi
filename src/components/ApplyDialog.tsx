@@ -144,7 +144,7 @@ const ApplicationForm = ({
             <FormItem>
               <FormLabel>Mobile Number</FormLabel>
               <FormControl>
-                <Input placeholder="Mobile number per Aadhar" {...field} />
+                <Input placeholder="Mobile number as per Aadhar" {...field} />
               </FormControl>
               <FormDescription></FormDescription>
             </FormItem>
