@@ -111,7 +111,7 @@ const MobileCard = ({ details }: { details: CardType }) => {
           <AccordionTrigger className="bg-[#FFE0A0] rounded-t flex justify-center items-center">
             Features
           </AccordionTrigger>
-          <AccordionContent className="bg-[#FFE0A0] rounded-b">
+          <AccordionContent className="bg-[#FFE0A0] h-fit rounded-b">
             <ul className="list-disc list-outside pl-10">
               {details.features.map((feature, id) => (
                 <li key={id}>{feature}</li>
@@ -119,30 +119,34 @@ const MobileCard = ({ details }: { details: CardType }) => {
             </ul>
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="welcome_offers">
-          <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
-            Welcome Offers
-          </AccordionTrigger>
-          <AccordionContent className="bg-[#FFE0A0] rounded-b">
-            <ul className="list-disc list-outside p-10">
-              {details.welcome_offer.map((offer, id) => (
-                <li key={id}>{offer}</li>
-              ))}
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="benefits">
-          <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
-          Benefits
-          </AccordionTrigger>
-          <AccordionContent className="bg-[#FFE0A0] rounded-b">
-            <ul className="list-disc list-outside p-10">
-              {details.benefits.map((offer, id) => (
-                <li key={id}>{offer}</li>
-              ))}
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
+        {details.welcome_offer.length ? (
+          <AccordionItem value="welcome_offers">
+            <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
+              Welcome Offers
+            </AccordionTrigger>
+            <AccordionContent className="bg-[#FFE0A0] rounded-b">
+              <ul className="list-disc list-outside p-10">
+                {details.welcome_offer.map((offer, id) => (
+                  <li key={id}>{offer}</li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        ) : null}
+        {details.benefits.length ? (
+          <AccordionItem value="benefits">
+            <AccordionTrigger className="bg-[#FFE0A0] rounded-t mt-2 flex items-center justify-center">
+              Other Benefits
+            </AccordionTrigger>
+            <AccordionContent className="bg-[#FFE0A0] rounded-b">
+              <ul className="list-disc list-outside p-10">
+                {details.benefits.map((offer, id) => (
+                  <li key={id}>{offer}</li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        ) : null}
       </Accordion>
     </div>
   );
@@ -221,21 +225,18 @@ const DesktopCard = ({ details }: { details: CardType }) => {
                 </ul>
               </>
             ) : (
-              <> </>
-            )}
-          </div>
-          <div>
-            {details.benefits.length ? (
-              <>
-                <strong className="font-semibold text-lg">Benefits</strong>
-                <ul className="list-disc list-outside pl-3">
-                  {details.benefits.map((offer, id) => (
-                    <li key={id}>{offer}</li>
-                  ))}
-                </ul>
-              </>
-            ) : (
-              <> </>
+              details.benefits.length && (
+                <>
+                  <strong className="font-semibold text-lg">
+                    Other Benifits
+                  </strong>
+                  <ul className="list-disc list-outside pl-3">
+                    {details.benefits.map((offer, id) => (
+                      <li key={id}>{offer}</li>
+                    ))}
+                  </ul>
+                </>
+              )
             )}
           </div>
         </div>
