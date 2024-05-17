@@ -1,6 +1,6 @@
 import { pgTable, text, timestamp, uuid, boolean } from "drizzle-orm/pg-core";
 
-export const users = pgTable("applications", {
+export const applications = pgTable("applications", {
   id: uuid("id").defaultRandom().primaryKey(),
   // -----
   email: text("email").notNull(),
@@ -15,3 +15,5 @@ export const users = pgTable("applications", {
     .defaultNow(),
   card: text("card").notNull(),
 });
+
+export type ApplicationDataType = typeof applications.$inferSelect;
