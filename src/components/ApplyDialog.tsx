@@ -23,6 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useToast } from "@/components/ui/use-toast";
 
 import { addEntryToApplications } from "@/actions/db";
 import { CardType } from "@/actions/getCardsByBankAndType";
@@ -70,13 +71,25 @@ const ApplicationForm = ({
       pincode: "",
     },
   });
+  const { toast } = useToast();
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
     setSubmitting(true);
     const applicationDetails = { ...data, cardName: details.key };
-    const time = await addEntryToApplications(applicationDetails);
-    console.log(applicationDetails);
-    console.log(time);
+    const insertedId = await addEntryToApplications(applicationDetails);
+    if (insertedId) {
+      toast({
+        title: "Application Submitted",
+        description:
+          "Your application has been submitted successfully, we will reach out to you soon!",
+      });
+    } else {
+      toast({
+        title: "Application Failed",
+        description: "There was an error submitting your application...",
+        variant: "destructive",
+      });
+    }
     changeOpenState(false);
     setSubmitting(false);
   }
